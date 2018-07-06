@@ -1,6 +1,0 @@
-{
-    "eslint.enable": true,
-    "eslint.autoFixOnSave": true,
-    "editor.tabSize": 2,
-    "editor.autoClosingBrackets": true
-  }
