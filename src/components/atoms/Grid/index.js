@@ -7,6 +7,6 @@ const Grid = ({ children }) => (
   </div>
 )
 Grid.propTypes = {
-  children: PropTypes.element.isRequired,
+  children: PropTypes.array.isRequired,
 }
 export default Grid

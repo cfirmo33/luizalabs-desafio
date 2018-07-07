@@ -5,11 +5,14 @@ import MenuItem from '../../atoms/MenuItem'
 
 const Sidebar = () => (
   <aside>
-    <Logo />
-    <Menu>
-      <MenuItem title="Todos" icon="fas fa-th" active />
-      <MenuItem title="Favoritos" icon="far fa-heart" />
-    </Menu>
+    <div className="intent">
+      <Logo />
+      <Menu>
+        <MenuItem title="Todos" icon="fas fa-th" active />
+        <MenuItem title="Favoritos" icon="far fa-heart" number={1} />
+      </Menu>
+    </div>
+
   </aside>
 )
 

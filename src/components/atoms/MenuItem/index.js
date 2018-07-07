@@ -1,14 +1,15 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
+import If from '../If'
 
-const MenuItem = ({ title, icon, active }) => (
+const MenuItem = ({ title, active, number }) => (
   <li>
     <a href=":;" className={classnames({ active })}>
-      <i className={icon} />
-      <span>
-        {title}
-      </span>
+      {title}
+      <If test={number}>
+        <small>{number}</small>
+      </If>
     </a>
   </li>
 )
@@ -16,7 +17,7 @@ const MenuItem = ({ title, icon, active }) => (
 MenuItem.propTypes = {
   title: PropTypes.string.isRequired,
   active: PropTypes.bool,
-  icon: PropTypes.string.isRequired,
+  number: PropTypes.number,
 }
 
 MenuItem.defaultProps = {

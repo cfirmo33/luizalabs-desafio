@@ -41,65 +41,95 @@ table {
   border-spacing: 0; }
 
 body {
-  background: #FFF;
-  font-family: 'Roboto', sans-serif; }
+  background: #202025;
+  font-family: 'Roboto', sans-serif;
+  padding-top: 100px; }
 
-h1.logo a {
+.container {
   display: flex;
-  justify-content: center;
   align-items: center;
-  height: 110px;
-  background-color: #FF000C;
-  font-size: 25px;
-  color: #FFF;
-  font-weight: 600;
-  text-decoration: none;
-  margin-bottom: 80px; }
-  h1.logo a:hover {
-    background-color: #333;
-    color: #FF000C; }
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%; }
 
 aside {
   position: fixed;
   display: flex;
-  justify-content: flex-start;
-  flex-direction: column;
-  width: 140px;
-  height: 100vh;
-  background: #f9f9f9;
-  border-right: 1px solid #f9f9f9; }
-  aside nav ul li {
-    display: block;
+  justify-content: center;
+  width: 100%;
+  height: 70px;
+  background: #2a2931;
+  margin-bottom: 50px;
+  border-bottom: 1px solid #3e3c48;
+  top: 0px;
+  z-index: 100000; }
+  aside::before {
+    position: absolute;
+    content: " ";
     width: 100%;
-    text-align: center;
-    margin-bottom: 50px; }
-    aside nav ul li a {
-      color: #333;
-      text-decoration: none;
-      font-size: 14px; }
-      aside nav ul li a i {
-        display: block;
-        font-size: 40px;
-        margin-bottom: 5px; }
-      aside nav ul li a span {
-        display: block; }
-      aside nav ul li a.active, aside nav ul li a:hover {
-        color: #FF000C; }
+    display: block;
+    border-bottom: 1px solid #151518;
+    bottom: -2px; }
+  aside .intent {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    width: 80%; }
+  aside h1.logo, aside h1.logo a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    color: #FFF;
+    font-weight: 600;
+    text-decoration: none;
+    height: 100%;
+    padding: 0px 5px;
+    margin-right: 20px; }
+  aside nav ul {
+    display: flex; }
+    aside nav ul li {
+      width: 100%;
+      text-align: center;
+      margin-right: 20px; }
+      aside nav ul li a {
+        display: flex;
+        color: #b3b3b3;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 600;
+        text-transform: uppercase;
+        padding-bottom: 5px;
+        border-bottom: 2px solid transparent; }
+        aside nav ul li a small {
+          display: table;
+          background-color: #FF000C;
+          padding: 0px 6px;
+          height: 20px;
+          line-height: 20px;
+          text-align: center;
+          border-radius: 50px;
+          color: #FFF;
+          margin-top: -5px;
+          margin-left: 5px;
+          font-weight: 400; }
+        aside nav ul li a.active, aside nav ul li a:hover {
+          color: #FFF;
+          border-color: #FF000C; }
 
 main {
   display: flex;
-  width: 100%;
-  margin-left: 165px;
-  margin-right: 35px;
+  width: 80%;
   flex-direction: column; }
 
 .lista-de-personagens {
   display: grid;
   grid-template-columns: auto auto auto auto;
-  grid-gap: 10px; }
+  grid-gap: 1px; }
   .lista-de-personagens .item {
     background-color: #000;
-    height: 250px;
+    height: 200px;
     background-size: cover;
     background-position: center;
     border-radius: 3px;
@@ -115,9 +145,15 @@ main {
       position: relative;
       width: 100%;
       height: 100%;
-      background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.9) 100%);
+      background-color: #202025;
+      background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.9) 100%);
+      opacity: 0.75;
       padding: 0px 15px;
-      box-sizing: border-box; }
+      box-sizing: border-box;
+      transition: 300ms ease all; }
+      .lista-de-personagens .item .shadow:hover {
+        opacity: 1;
+        background-color: transparent; }
     .lista-de-personagens .item h1 {
       font-size: 24px;
       color: #FFF;
@@ -136,7 +172,8 @@ main {
       cursor: pointer;
       transition: ease 300ms all; }
       .lista-de-personagens .item .love:hover {
-        border-color: #FF000C; }
+        border-color: #FF000C;
+        color: #FF000C; }
     .lista-de-personagens .item:hover {
       border: #000;
       box-shadow: 0px 0px 39px 3px rgba(0, 0, 0, 0.57);
@@ -145,9 +182,13 @@ main {
       .lista-de-personagens .item:hover .love {
         opacity: 1; }
 
-.container {
-  display: flex;
-  justify-content: flex-start;
-  flex-direction: row;
-  width: 100%;
-  height: 100%; }
+.box-title .title-box {
+  font-size: 100px;
+  background-image: linear-gradient(to bottom, rgba(255, 0, 7, 0.8) 0%, #ff004b 100%);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -5px;
+  margin-bottom: -22px; }

@@ -134,13 +134,16 @@ const characters = [
 ]
 characters.sort(() => 0.5 - Math.random())
 const ListCharacters = () => (
-  <Grid>
-    {
+  <div className="box-title">
+    <h4 className="title-box">TODOS</h4>
+    <Grid>
+      {
       characters.map((character, index) => (
-        <CharacterItem name={character.name} image={character.image} id={index} />
+        <CharacterItem name={character.name} image={character.image} key={index} />
       ))
     }
-  </Grid>
+    </Grid>
+  </div>
 )
 
 export default ListCharacters
