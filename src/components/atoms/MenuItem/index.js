@@ -7,7 +7,7 @@ const MenuItem = ({ title, active, number }) => (
   <li>
     <a href=":;" className={classnames({ active })}>
       {title}
-      <If test={number}>
+      <If test={(number !== undefined && number > 0)}>
         <small>{number}</small>
       </If>
     </a>
@@ -22,6 +22,7 @@ MenuItem.propTypes = {
 
 MenuItem.defaultProps = {
   active: false,
+  number: 0,
 }
 
 export default MenuItem

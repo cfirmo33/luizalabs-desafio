@@ -53,7 +53,7 @@ body {
   width: 100%;
   height: 100%; }
 
-aside {
+.menu-bar {
   position: fixed;
   display: flex;
   justify-content: center;
@@ -64,19 +64,19 @@ aside {
   border-bottom: 1px solid #3e3c48;
   top: 0px;
   z-index: 100000; }
-  aside::before {
+  .menu-bar::before {
     position: absolute;
     content: " ";
     width: 100%;
     display: block;
     border-bottom: 1px solid #151518;
     bottom: -2px; }
-  aside .intent {
+  .menu-bar .intent {
     display: flex;
     align-items: center;
     flex-direction: row;
     width: 80%; }
-  aside h1.logo, aside h1.logo a {
+  .menu-bar h1.logo, .menu-bar h1.logo a {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -87,13 +87,13 @@ aside {
     height: 100%;
     padding: 0px 5px;
     margin-right: 20px; }
-  aside nav ul {
+  .menu-bar nav ul {
     display: flex; }
-    aside nav ul li {
+    .menu-bar nav ul li {
       width: 100%;
       text-align: center;
       margin-right: 20px; }
-      aside nav ul li a {
+      .menu-bar nav ul li a {
         display: flex;
         color: #b3b3b3;
         text-decoration: none;
@@ -102,7 +102,7 @@ aside {
         text-transform: uppercase;
         padding-bottom: 5px;
         border-bottom: 2px solid transparent; }
-        aside nav ul li a small {
+        .menu-bar nav ul li a small {
           display: table;
           background-color: #FF000C;
           padding: 0px 6px;
@@ -114,9 +114,41 @@ aside {
           margin-top: -5px;
           margin-left: 5px;
           font-weight: 400; }
-        aside nav ul li a.active, aside nav ul li a:hover {
+        .menu-bar nav ul li a.active, .menu-bar nav ul li a:hover {
           color: #FFF;
           border-color: #FF000C; }
+  .menu-bar .search-bar {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 33px;
+    border: 1px solid #34333e;
+    background-color: #202026;
+    border-radius: 5px;
+    align-items: center; }
+    .menu-bar .search-bar .icon {
+      color: #39373e;
+      font-size: 20px;
+      margin-left: 10px;
+      margin-right: 10px; }
+    .menu-bar .search-bar input {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      padding: 0;
+      border: 0;
+      background-color: transparent;
+      z-index: 1;
+      padding-left: 40px;
+      box-sizing: border-box;
+      font-size: 14px;
+      color: #CCC; }
+      .menu-bar .search-bar input::placeholder {
+        color: #4f4f4f;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: -0.8px;
+        opacity: 1; }
 
 main {
   display: flex;

@@ -1,4 +1,3 @@
-import React from 'react'
 import PropTypes from 'prop-types'
 
 const If = ({ test, children }) => {
@@ -14,4 +13,7 @@ If.propTypes = {
   children: PropTypes.element.isRequired,
 }
 
+If.defaultTypes = {
+  test: false,
+}
 export default If

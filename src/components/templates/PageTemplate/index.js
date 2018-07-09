@@ -1,9 +1,9 @@
 import React from 'react'
-import Sidebar from '../../molecules/Sidebar'
+import MenuBar from '../../organisms/MenuBar'
 
 const PageTemplate = ({ children }) => (
   <div className="container">
-    <Sidebar />
+    <MenuBar />
     <main>
       {children}
     </main>
