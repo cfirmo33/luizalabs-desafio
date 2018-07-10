@@ -4,8 +4,6 @@ import './styles/main.css'
 import HomePage from './components/pages/HomePage'
 import FavoritesPage from './components/pages/FavoritesPage'
 
-import registerServiceWorker from './registerServiceWorker'
-
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 
 import { createStore, applyMiddleware } from 'redux'
@@ -29,4 +27,3 @@ ReactDOM.render(
   </Provider>,
   document.getElementById('root')
 )
-registerServiceWorker()
