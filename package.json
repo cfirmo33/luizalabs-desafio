@@ -2,7 +2,7 @@
   "name": "csh-web",
   "version": "0.1.0",
   "private": true,
-  "homepage" : "https://fabriciojso.github.io/luizalabs-desafio-csh/build",
+  "homepage": "https://fabriciojso.github.io/luizalabs-desafio-csh",
   "dependencies": {
     "append-query": "^2.0.1",
     "axios": "^0.18.0",
@@ -27,7 +27,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "devDependencies": {
     "eslint": "^4.19.1",
@@ -36,6 +38,7 @@
     "eslint-plugin-import": "^2.13.0",
     "eslint-plugin-jsx-a11y": "^6.1.0",
     "eslint-plugin-react": "^7.10.0",
+    "gh-pages": "^1.2.0",
     "node-sass-chokidar": "^1.3.0",
     "stylelint": "^8.4.0",
     "stylelint-config-pagarme-react": "^1.2.0"
