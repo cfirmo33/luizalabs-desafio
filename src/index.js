@@ -4,7 +4,9 @@ import './styles/main.css'
 import HomePage from './components/pages/HomePage'
 import FavoritesPage from './components/pages/FavoritesPage'
 
-import { BrowserRouter, Route, Switch } from 'react-router-dom'
+import registerServiceWorker from './registerServiceWorker'
+
+import { HashRouter, Route, Switch } from 'react-router-dom'
 
 import { createStore, applyMiddleware } from 'redux'
 import { Provider } from 'react-redux'
@@ -18,12 +20,13 @@ const store = applyMiddleware(promise, thunk, multi)(createStore)(reducers, devT
 
 ReactDOM.render(
   <Provider store={store}>
-    <BrowserRouter>
+    <HashRouter>
       <Switch>
         <Route exact path="/" component={HomePage} />
         <Route path="/favorites" component={FavoritesPage} />
       </Switch>
-    </BrowserRouter>
+    </HashRouter>
   </Provider>,
   document.getElementById('root')
 )
+registerServiceWorker()

@@ -3,7 +3,7 @@ import addParam from 'append-query'
 
 const publicKey = 'fba222cafbdc409f768cb548e344e409'
 const privateKey = 'f4383981871bf44e1c0c9b1725b45c2393294ebf'
-const URL = 'http://gateway.marvel.com'
+const URL = '//gateway.marvel.com'
 
 const generateUrl = (url) => {
   const ts = 1
@@ -16,4 +16,4 @@ const generateUrl = (url) => {
 }
 
 export const api = uri => generateUrl(`${URL}/v1/${uri}`)
-export const image = imageUrl => generateUrl(imageUrl)
+export const image = imageUrl => generateUrl(imageUrl.replace('http://', 'https://'))
