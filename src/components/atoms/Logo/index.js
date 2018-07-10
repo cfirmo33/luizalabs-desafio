@@ -1,8 +1,9 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Logo = () => (
   <h1 className="logo">
-    <a href=":;">Heroes</a>
+    <Link to="/">Heroes</Link>
   </h1>
 )
 

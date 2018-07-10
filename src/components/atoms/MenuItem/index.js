@@ -2,27 +2,33 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
 import If from '../If'
+import { Link, withRouter } from 'react-router-dom'
 
-const MenuItem = ({ title, active, number }) => (
+const isActive = (match, to) => match.path === to
+const MenuItem = ({
+  title,
+  number,
+  to,
+  match,
+}) => (
   <li>
-    <a href=":;" className={classnames({ active })}>
+    <Link to={to} className={classnames({ active: isActive(match, to) })}>
       {title}
       <If test={(number !== undefined && number > 0)}>
         <small>{number}</small>
       </If>
-    </a>
+    </Link>
   </li>
 )
 
 MenuItem.propTypes = {
   title: PropTypes.string.isRequired,
-  active: PropTypes.bool,
   number: PropTypes.number,
+  to: PropTypes.string.isRequired,
 }
 
 MenuItem.defaultProps = {
-  active: false,
   number: 0,
 }
 
-export default MenuItem
+export default withRouter(MenuItem)

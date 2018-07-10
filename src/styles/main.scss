@@ -1,9 +1,19 @@
 @import 'base/reset';
 
+$mobile: "(max-width: 767px)";
+$tablet: "(min-width: 768px) and (max-width: 1023px)";
+$desktop: "(min-width: 1024px) and (max-width: 1200px)";
+$desktop-xl: "(min-width: 1201px)";
+
+
 body{
   background: #202025;
   font-family: 'Roboto', sans-serif;
   padding-top: 100px;
+
+  @media #{$mobile}{
+    padding-top: 115px;
+  }
 }
 
 
@@ -27,6 +37,9 @@ body{
   border-bottom: 1px solid #3e3c48;
   top: 0px;
   z-index: 100000;
+  @media #{$mobile} {
+    height: 100px;
+  }
   &::before{
     position: absolute;
     content: " ";
@@ -40,6 +53,12 @@ body{
     align-items: center;
     flex-direction: row;
     width: 80%;
+    @media #{$mobile}{
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 95%;
+    }
   }
   h1.logo, h1.logo a{
     display: flex;
@@ -52,11 +71,18 @@ body{
     height: 100%;
     padding: 0px 5px;
     margin-right: 20px;
+    @media #{$mobile, $tablet}{
+      display: none;
+    }
   }
 
   nav{
     ul{
       display: flex;
+      @media #{$mobile}{
+        margin-bottom: 20px;
+        margin-top: 10px;
+      }
       li{
         width: 100%;
         text-align: center;
@@ -70,6 +96,7 @@ body{
           text-transform: uppercase;
           padding-bottom: 5px;
           border-bottom: 2px solid transparent;
+          transition: 300ms ease all;
           small{
             display: table;
             background-color: #FF000C;
@@ -82,6 +109,7 @@ body{
             margin-top: -5px;
             margin-left: 5px;
             font-weight: 400;
+            transition: 300ms ease all;
           }
           &.active, &:hover{
             color:#FFF;
@@ -126,30 +154,52 @@ body{
         text-transform: uppercase;
         letter-spacing: -0.8px;
         opacity: 1;
-    }
+      }
+
+      @media #{$mobile}{
+        font-size: 12px;
+      }
     }
   }
+}
+.loading{
+  margin: 0 auto;
+  margin-top: 50px;
 }
 main{
   display: flex;
   width: 80%;
   flex-direction: column;
+  @media #{$mobile}{
+    width: 95%;
+  }
 }
 .lista-de-personagens{
   display: grid;
-  grid-template-columns: auto auto auto auto;
-  grid-gap: 1px;
+  grid-template-columns: repeat(5, 1fr);
+  @media #{$mobile}{
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media #{$desktop}{
+    grid-template-columns: repeat(4, 1fr);
+  }
 
+  @media #{$tablet}{
+    grid-template-columns: repeat(3, 1fr);
+  }
+  grid-gap: 1px;
+  transition: 300ms ease all;
   .item{
     background-color: #000;
     height: 200px;
     background-size: cover;
-    background-position: center;
+    background-position: center top;
     border-radius: 3px;
     box-sizing: border-box;
     transition: 300ms ease all;
     cursor: pointer;
     overflow: hidden;
+    background-image: none;
    
     .shadow{
       display: flex;
@@ -186,11 +236,26 @@ main{
       border-radius: 100px;
       background-color: rgba(0, 0, 0, 0.603);
       opacity: 0;
+      @media #{$mobile, $tablet}{
+        opacity: 1;
+      }
       cursor: pointer; 
       transition: ease 300ms all;
-      &:hover{
+      &:hover, &:focus{
         border-color: #FF000C;
         color: #FF000C;
+        @media #{$mobile, $tablet}{
+          border-color: #FFF;
+          color: #FFF;
+        }
+      }
+
+      &.loved{
+        opacity: 1;
+        background-color: #FF000C;
+        &:hover{
+          color: #FFF;
+        }
       }
       
     }
@@ -198,6 +263,10 @@ main{
       border: #000;
       box-shadow: 0px 0px 39px 3px rgba(0,0,0,0.57);
       transform: scale(1.2);
+      @media #{$mobile, $tablet}{
+        transform: none;
+        box-shadow: none;
+      }
       z-index: 100;
       .love{
         opacity: 1;
@@ -217,6 +286,41 @@ main{
     font-weight: 900;
     text-transform: uppercase;
     letter-spacing: -5px;
-    margin-bottom: -22px;
+    margin-bottom: -15px;
+
+    @media #{$mobile}{
+      font-size: 50px;
+      margin-bottom: -5px;
+      display: none;
+    }
+  }
+}
+
+.paginate{
+  display: grid;
+  grid-template-columns: repeat(14, 1fr);
+  li{
+    a{
+      display: inline-table;
+      width: 100%;
+      height: 50px;
+    }
+  }
+}
+button.more{
+  display: table;
+  width: 60%;
+  height: 50px;
+  margin: 20px auto;
+  background: #2a2931;
+  border: 1px solid #3e3c48;
+  cursor: pointer;
+  color: #CCC;
+  font-weight: 600;
+  font-size: 18px;
+  border-radius: 5px;
+  &:hover{
+    background-color: #393742;
+    border-color: #4b4856;
   }
 }
