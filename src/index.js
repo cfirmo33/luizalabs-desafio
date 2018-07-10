@@ -1,31 +1,41 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import './styles/main.css'
+import 'react-redux-toastr/lib/css/react-redux-toastr.min.css'
 import HomePage from './components/pages/HomePage'
 import FavoritesPage from './components/pages/FavoritesPage'
-
 import registerServiceWorker from './registerServiceWorker'
-
 import { HashRouter, Route, Switch } from 'react-router-dom'
-
-import { createStore, applyMiddleware } from 'redux'
 import { Provider } from 'react-redux'
-import reducers from './redux/createStore'
-import promise from 'redux-promise'
-import thunk from 'redux-thunk'
-import multi from 'redux-multi'
-
-const devTools = window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
-const store = applyMiddleware(promise, thunk, multi)(createStore)(reducers, devTools)
+import store from './redux/createStore'
+import ReduxToastr from 'react-redux-toastr'
 
 ReactDOM.render(
   <Provider store={store}>
-    <HashRouter>
-      <Switch>
-        <Route exact path="/" component={HomePage} />
-        <Route path="/favorites" component={FavoritesPage} />
-      </Switch>
-    </HashRouter>
+    <div>
+
+      <HashRouter>
+        <Switch>
+          <Route exact path="/" component={HomePage} />
+          <Route exact path="/search/:search" component={HomePage} />
+          <Route path="/favorites" component={FavoritesPage} />
+
+          <ReduxToastr
+            timeOut={4000}
+            newestOnTop={false}
+            preventDuplicates
+            position="top-left"
+            transitionIn="fadeIn"
+            transitionOut="fadeOut"
+            progressBar
+          />
+        </Switch>
+
+      </HashRouter>
+
+
+    </div>
+
   </Provider>,
   document.getElementById('root')
 )

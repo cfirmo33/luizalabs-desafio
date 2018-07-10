@@ -241,18 +241,21 @@ main{
       }
       cursor: pointer; 
       transition: ease 300ms all;
-      &:hover, &:focus{
+      &:hover{
         border-color: #FF000C;
         color: #FF000C;
         @media #{$mobile, $tablet}{
-          border-color: #FFF;
-          color: #FFF;
+          &, &:focus{
+            border-color: #FFF;
+            color: #FFF;
+          }
         }
       }
 
       &.loved{
         opacity: 1;
         background-color: #FF000C;
+        color: #FFF;
         &:hover{
           color: #FFF;
         }

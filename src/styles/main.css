@@ -248,16 +248,17 @@ main {
       @media (max-width: 767px), (min-width: 768px) and (max-width: 1023px) {
         .lista-de-personagens .item .love {
           opacity: 1; } }
-      .lista-de-personagens .item .love:hover, .lista-de-personagens .item .love:focus {
+      .lista-de-personagens .item .love:hover {
         border-color: #FF000C;
         color: #FF000C; }
         @media (max-width: 767px), (min-width: 768px) and (max-width: 1023px) {
-          .lista-de-personagens .item .love:hover, .lista-de-personagens .item .love:focus {
+          .lista-de-personagens .item .love:hover, .lista-de-personagens .item .love:hover:focus {
             border-color: #FFF;
             color: #FFF; } }
       .lista-de-personagens .item .love.loved {
         opacity: 1;
-        background-color: #FF000C; }
+        background-color: #FF000C;
+        color: #FFF; }
         .lista-de-personagens .item .love.loved:hover {
           color: #FFF; }
     .lista-de-personagens .item:hover {

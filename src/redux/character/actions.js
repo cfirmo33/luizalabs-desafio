@@ -3,10 +3,9 @@ import { FETCH_ALL_CHARACTERS, FETCH_ALL_FAVORITES, LOADING_CHARACTERS } from '.
 import { api } from '../../helpers/marvelApi'
 import addParam from 'append-query'
 import store from 'store'
+import { toastr } from 'react-redux-toastr'
 
-export const toLoading = () => ({
-  type: LOADING_CHARACTERS,
-})
+export const toLoading = () => ({ type: LOADING_CHARACTERS })
 
 export const getList = (page = 0, limit = 20) => (dispatch) => {
   let url = api('/public/characters')
@@ -28,6 +27,9 @@ export const search = nameStartsWith => (dispatch) => {
   url = addParam(url, { nameStartsWith })
   axios.get(url)
     .then((response) => {
+      if (response.data.data.results.length === 0) {
+        toastr.error('Aviso', `Nenhum personagem encontrado para a busca '${nameStartsWith}'`)
+      }
       dispatch({
         type: FETCH_ALL_CHARACTERS,
         payload: response.data,
@@ -52,6 +54,9 @@ export const setFavorite = (character) => {
   })
   if (!favoriteExists) {
     favorites.push(character)
+    toastr.success('Favoritos', `${character.name} foi adicionado como favorito!`)
+  } else {
+    toastr.info('Favoritos', `${character.name} foi removido dos favoritos`)
   }
 
   store.set('favorites', favorites)

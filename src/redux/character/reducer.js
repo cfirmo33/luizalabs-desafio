@@ -11,7 +11,7 @@ const INITIAL_STATE = {
   loading: false,
 }
 
-export default (state = INITIAL_STATE, action) => {
+export const reducer = (state = INITIAL_STATE, action) => {
   switch (action.type) {
     case FETCH_ALL_CHARACTERS:
       return {

@@ -3,7 +3,7 @@ import Icon from '../../atoms/Icon'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import { search, getList, toLoading } from '../../../redux/character/actions'
-
+import { withRouter } from 'react-router-dom'
 
 class SearchBar extends Component {
   constructor (props) {
@@ -13,6 +13,7 @@ class SearchBar extends Component {
     }
     this.timeout = null
   }
+
 
   handleChange ({ target: { value } }) {
     const oldValue = this.state.search
@@ -26,7 +27,7 @@ class SearchBar extends Component {
       this.timeout = setTimeout(() => {
         this.props.toLoading()
         this.props.search(value)
-      }, 600)
+      }, 1000)
     }
   }
 
@@ -46,4 +47,4 @@ class SearchBar extends Component {
 }
 
 const mapDispatchToProps = dispatch => bindActionCreators({ search, getList, toLoading }, dispatch)
-export default connect(null, mapDispatchToProps)(SearchBar)
+export default connect(null, mapDispatchToProps)(withRouter(SearchBar))
