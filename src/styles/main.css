@@ -494,3 +494,7 @@ button.more {
       .details figure .shadow {
         opacity: 1;
         background-color: transparent; } }
+
+@media (max-width: 767px) {
+  .redux-toastr {
+    display: none; } }

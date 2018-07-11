@@ -356,7 +356,7 @@ button.more{
       color: #f6f6f6;
       font-weight: 700;
       border-left: 5px solid #FF000C;
-      
+  
       padding-left: 10px;
       margin-bottom: 50px;
 
@@ -550,5 +550,11 @@ button.more{
         } 
       }
     }
+  }
+}
+
+.redux-toastr{
+  @media #{$mobile}{
+    display: none;
   }
 }
