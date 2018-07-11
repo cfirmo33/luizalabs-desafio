@@ -290,7 +290,7 @@ main {
         background-color: transparent; }
 
 .box-title .title-box {
-  font-size: 100px;
+  font-size: 60px;
   background-image: linear-gradient(to bottom, rgba(255, 0, 7, 0.8) 0%, #ff004b 100%);
   color: transparent;
   -webkit-background-clip: text;
@@ -298,7 +298,8 @@ main {
   font-weight: 900;
   text-transform: uppercase;
   letter-spacing: -5px;
-  margin-bottom: -15px; }
+  border-bottom: 1px solid #32323a;
+  margin-bottom: 20px; }
   @media (max-width: 767px) {
     .box-title .title-box {
       font-size: 50px;
@@ -333,12 +334,16 @@ button.more {
       .details .content-details {
         width: 100%; } }
     .details .content-details h1 {
-      font-size: 60px;
+      font-size: 40px;
       color: #f6f6f6;
       font-weight: 700;
-      border-left: 7px solid #FF000C;
+      border-left: 5px solid #FF000C;
       padding-left: 10px;
       margin-bottom: 50px; }
+      .details .content-details h1 .love {
+        position: relative;
+        top: -10px;
+        margin-left: 15px; }
       @media (max-width: 767px) {
         .details .content-details h1 {
           display: flex;
@@ -351,7 +356,6 @@ button.more {
           width: 100%;
           box-sizing: border-box; }
           .details .content-details h1 .love {
-            position: relative;
             top: -155px;
             right: 20px; } }
     .details .content-details .menu-details {
