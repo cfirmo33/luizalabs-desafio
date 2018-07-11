@@ -8,12 +8,12 @@ const Item = ({
   image,
   name,
 }) => (
-  <Link to={`/detail/${character.id}/overview`} className="item" style={{ backgroundImage: `url('${image}')` }}>
-    <div className="shadow">
-      <LoveButton character={character} />
+  <div className="item" style={{ backgroundImage: `url('${image}')` }}>
+    <LoveButton character={character} />
+    <Link to={`/detail/${character.id}/overview`} className="shadow">
       <h1>{name}</h1>
-    </div>
-  </Link>
+    </Link>
+  </div>
 )
 
 Item.propTypes = {

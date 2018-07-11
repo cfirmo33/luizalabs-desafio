@@ -24,7 +24,7 @@ const FavoritesPage = ({ characters }) => {
 }
 
 FavoritesPage.propTypes = {
-  characters: PropTypes.objectOf(Object).isRequired,
+  characters: PropTypes.arrayOf(Object).isRequired,
 }
 
 const mapStateToProps = state => ({ characters: state.characters.favorites })

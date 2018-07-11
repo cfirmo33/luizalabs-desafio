@@ -24,10 +24,13 @@ export const fetchCharacters = (page = 0, search = undefined, limit = 40) => (di
       result.page = page
       result.search = search
 
-      dispatch({
-        type: FETCH_ALL_CHARACTERS,
-        payload: result,
-      })
+      dispatch([
+        {
+          type: FETCH_ALL_CHARACTERS,
+          payload: result,
+        },
+        sendNotify(),
+      ])
     })
 }
 

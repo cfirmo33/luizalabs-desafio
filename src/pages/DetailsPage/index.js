@@ -77,8 +77,8 @@ class DetailsPage extends Component {
               </HashRouter>
             </div>
           </div>
-          <figure>
-            <img src={image(`${character.thumbnail.path}.${character.thumbnail.extension}`)} alt={character.name} />
+          <figure style={{ backgroundImage: `url('${image(`${character.thumbnail.path}.${character.thumbnail.extension}`)}')` }}>
+            <div className="shadow" />
           </figure>
         </div>
       </PageTemplate>

@@ -10,7 +10,8 @@ import { Link, withRouter } from 'react-router-dom'
 
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
-import { getFavorites, fetchCharacters } from '../../../redux/character/actions'
+import { getFavorites, fetchCharacters, sendNotify } from '../../../redux/character/actions'
+import { LOADING_HOME_NOTIFICATION } from '../../../redux/character/notifications'
 
 
 class Header extends Component {
@@ -20,11 +21,9 @@ class Header extends Component {
       search: '',
       redirect: false,
     }
-
     this.handleChangeSearch = this.handleChangeSearch.bind(this)
     this.timeout = undefined
   }
-
 
   componentWillMount () {
     if (this.props.match.params.search !== undefined) {
@@ -33,7 +32,6 @@ class Header extends Component {
       })
     }
   }
-
 
   componentDidMount () {
     this.props.getFavorites()
@@ -54,10 +52,11 @@ class Header extends Component {
     this.timeout = setTimeout(() => {
       if (this.state.search.length > 0) {
         this.props.history.push(`/search/${this.state.search}`)
+        this.props.sendNotify(LOADING_HOME_NOTIFICATION)
       } else {
         this.props.history.push('/')
       }
-    }, 1000)
+    }, 700)
   }
 
 
@@ -100,6 +99,7 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = dispatch => bindActionCreators({
   getFavorites,
   fetchCharacters,
+  sendNotify,
 }, dispatch)
 
 export default connect(mapStateToProps, mapDispatchToProps)(withRouter(Header))

@@ -8,10 +8,10 @@ import InfiniteScroll from 'react-infinite-scroller'
 
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
-import { fetchCharacters } from '../redux/character/actions'
+import { fetchCharacters, sendNotify } from '../redux/character/actions'
 
 import If from '../components/Layout/Helper/If'
-
+import { LOADING_HOME_NOTIFICATION } from '../redux/character/notifications'
 
 class HomePage extends Component {
   constructor (props) {
@@ -21,6 +21,7 @@ class HomePage extends Component {
   }
 
   componentWillMount () {
+    this.props.sendNotify(LOADING_HOME_NOTIFICATION)
     this.props.fetchCharacters(0, this.search)
   }
 
@@ -28,10 +29,10 @@ class HomePage extends Component {
     const prevSearch = prevProps.match.params.search
     this.search = this.props.match.params.search
     if (prevSearch !== this.search) {
+      this.props.sendNotify(LOADING_HOME_NOTIFICATION)
       this.props.fetchCharacters(0, this.search)
     }
   }
-
 
   hasMore () {
     const { total, count, offset } = this.props.result
@@ -40,13 +41,12 @@ class HomePage extends Component {
 
   renderCharacters () {
     const { characters } = this.props
-    if (this.props.page === 0) {
+    if (this.props.page === 0 || this.props.notification) {
       this.items = []
     }
     this.items = this.items.concat(characters)
     return this.items
   }
-
 
   render () {
     return (
@@ -56,19 +56,25 @@ class HomePage extends Component {
             <If test={this.search === undefined}>Todos</If>
             <If test={this.search !== undefined}> <small>Busca: {this.search}</small></If>
           </h4>
-          <InfiniteScroll
-            pageStart={0}
-            element="div"
-            loadMore={(page) => {
+          <If test={this.props.notification === LOADING_HOME_NOTIFICATION}>
+            <Loading />
+          </If>
+
+          <If test={this.props.notification !== LOADING_HOME_NOTIFICATION}>
+            <InfiniteScroll
+              pageStart={0}
+              element="div"
+              loadMore={(page) => {
               this.props.fetchCharacters(page, this.search)
             }}
-            hasMore={this.hasMore()}
-            threshold={400}
-            useWindow
-            loader={<Loading key={0} />}
-          >
-            <CharacterList characters={this.renderCharacters()} />
-          </InfiniteScroll>
+              hasMore={this.hasMore()}
+              threshold={400}
+              useWindow
+              loader={<Loading key={0} />}
+            >
+              <CharacterList characters={this.renderCharacters()} />
+            </InfiniteScroll>
+          </If>
         </div>
       </PageTemplate>
     )
@@ -86,10 +92,12 @@ const mapStateToProps = state => ({
   result: state.characters.list.data,
   page: state.characters.list.page,
   isPresearch: state.characters.isPresearch,
+  notification: state.characters.notification,
 })
 
 const mapDispatchToProps = dispatch => bindActionCreators({
   fetchCharacters,
+  sendNotify,
 }, dispatch)
 
 export default connect(mapStateToProps, mapDispatchToProps)(HomePage)

@@ -10,7 +10,7 @@ const If = ({ test, children }) => {
 
 If.propTypes = {
   test: PropTypes.bool.isRequired,
-  children: PropTypes.element.isRequired,
+  children: PropTypes.any.isRequired,
 }
 
 If.defaultTypes = {

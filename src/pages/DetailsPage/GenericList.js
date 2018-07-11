@@ -54,7 +54,7 @@ class GenericList extends Component {
           <div className="grid-items">
             {
             this.getItems().map(item => (
-              <div className="item">
+              <div className="item" key={item.id}>
                 <img src={image(`${item.thumbnail.path}.${item.thumbnail.extension}`)} alt={item.title} />
                 <h5>{item.title}</h5>
               </div>
