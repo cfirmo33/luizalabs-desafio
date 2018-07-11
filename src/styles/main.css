@@ -324,12 +324,12 @@ button.more {
 .details {
   display: flex;
   justify-content: space-between; }
-  @media (max-width: 767px) {
+  @media (max-width: 767px), (min-width: 768px) and (max-width: 1023px) {
     .details {
       flex-direction: column; } }
   .details .content-details {
     width: 70%; }
-    @media (max-width: 767px) {
+    @media (max-width: 767px), (min-width: 768px) and (max-width: 1023px) {
       .details .content-details {
         width: 100%; } }
     .details .content-details h1 {
@@ -428,12 +428,17 @@ button.more {
             background-color: #FFF; }
     .details .content-details .content-internal-details .grid-items {
       display: grid;
-      grid-template-columns: repeat(6, 1fr);
+      grid-template-columns: repeat(5, 1fr);
       grid-gap: 30px 10px; }
+      @media (min-width: 1024px) and (max-width: 1200px) {
+        .details .content-details .content-internal-details .grid-items {
+          grid-template-columns: repeat(4, 1fr); } }
+      @media (min-width: 768px) and (max-width: 1023px) {
+        .details .content-details .content-internal-details .grid-items {
+          grid-template-columns: repeat(3, 1fr); } }
       @media (max-width: 767px) {
         .details .content-details .content-internal-details .grid-items {
-          grid-template-columns: repeat(2, 1fr);
-          grid-gap: 30px 10px; } }
+          grid-template-columns: repeat(2, 1fr); } }
       .details .content-details .content-internal-details .grid-items .item img {
         display: table;
         width: 100%;
@@ -447,12 +452,20 @@ button.more {
         font-weight: 400;
         text-align: justify; }
   .details figure {
-    width: 28%;
-    height: 28%;
+    display: table;
+    width: 300px;
+    height: 300px;
     border-radius: 100%;
     overflow: hidden;
     background-size: cover;
     background-position: center; }
+    @media (min-width: 1024px) and (max-width: 1200px) {
+      .details figure {
+        width: 250px;
+        height: 250px; } }
+    @media (min-width: 768px) and (max-width: 1023px) {
+      .details figure {
+        display: none; } }
     .details figure .shadow {
       display: none; }
     @media (max-width: 767px) {

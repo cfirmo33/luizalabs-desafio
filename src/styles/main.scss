@@ -343,12 +343,12 @@ button.more{
 .details{
   display: flex;
   justify-content: space-between;
-  @media #{$mobile}{
+  @media #{$mobile, $tablet}{
     flex-direction: column;
   }
   .content-details{
     width: 70%;
-    @media #{$mobile}{
+    @media #{$mobile, $tablet}{
       width: 100%;
     }
     h1{
@@ -472,11 +472,16 @@ button.more{
 
       .grid-items{
         display: grid;
-        grid-template-columns: repeat(6, 1fr);
+        grid-template-columns: repeat(5, 1fr);
         grid-gap: 30px 10px;
+        @media #{$desktop}{
+          grid-template-columns: repeat(4, 1fr);
+        }
+        @media #{$tablet}{
+          grid-template-columns: repeat(3, 1fr);
+        }
         @media #{$mobile}{
           grid-template-columns: repeat(2, 1fr);
-          grid-gap: 30px 10px;
         }
         .item{
           img{
@@ -499,8 +504,16 @@ button.more{
    
   }
   figure{
-    width: 28%;
-    height: 28%;
+    display: table;
+    width: 300px;
+    height: 300px;
+    @media #{$desktop}{
+      width: 250px;
+      height: 250px;
+    }
+    @media #{$tablet}{
+      display: none;
+    }
     border-radius: 100%;
     overflow: hidden;
     background-size: cover;
