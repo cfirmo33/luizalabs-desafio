@@ -1,10 +1,11 @@
 import React from 'react'
-import MenuBar from '../../organisms/MenuBar'
 import ReduxToastr from 'react-redux-toastr'
+import PropTypes from 'prop-types'
+import Header from '../../Layout/Header'
 
 const PageTemplate = ({ children }) => (
   <div className="container">
-    <MenuBar />
+    <Header />
     <main>
       {children}
     </main>
@@ -19,5 +20,7 @@ const PageTemplate = ({ children }) => (
     />
   </div>
 )
-
+PageTemplate.propTypes = {
+  children: PropTypes.element.isRequired,
+}
 export default PageTemplate

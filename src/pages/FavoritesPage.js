@@ -1,7 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import PageTemplate from '../templates/PageTemplate'
-import ListCharacters from '../organisms/ListCharacters'
+
+import PageTemplate from '../components/templates/PageTemplate'
+import CharacterList from '../components/Character/List'
+
 import { connect } from 'react-redux'
 import { Redirect } from 'react-router-dom'
 
@@ -9,7 +11,10 @@ const FavoritesPage = ({ characters }) => {
   if (characters.length > 0) {
     return (
       <PageTemplate>
-        <ListCharacters title="Favoritos" characters={characters} />
+        <div className="box-title">
+          <h4 className="title-box">Favoritos</h4>
+          <CharacterList characters={characters} />
+        </div>
       </PageTemplate>
     )
   }
@@ -17,7 +22,6 @@ const FavoritesPage = ({ characters }) => {
     <Redirect to="/" />
   )
 }
-
 
 FavoritesPage.propTypes = {
   characters: PropTypes.objectOf(Object).isRequired,

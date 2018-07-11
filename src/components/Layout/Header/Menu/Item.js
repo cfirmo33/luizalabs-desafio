@@ -1,11 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
-import If from '../If'
+import If from '../../../Layout/Helper/If'
 import { Link, withRouter } from 'react-router-dom'
 
 const isActive = (match, to) => match.path === to
-const MenuItem = ({
+
+const Item = ({
   title,
   number,
   to,
@@ -21,14 +22,15 @@ const MenuItem = ({
   </li>
 )
 
-MenuItem.propTypes = {
+Item.propTypes = {
   title: PropTypes.string.isRequired,
   number: PropTypes.number,
   to: PropTypes.string.isRequired,
+  match: PropTypes.objectOf(Object).isRequired,
 }
 
-MenuItem.defaultProps = {
+Item.defaultProps = {
   number: 0,
 }
 
-export default withRouter(MenuItem)
+export default withRouter(Item)

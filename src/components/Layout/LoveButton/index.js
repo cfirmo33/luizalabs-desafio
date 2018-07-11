@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 import Icon from '../Icon'
-import PropTypes from 'prop-types'
 import { setFavorite } from '../../../redux/character/actions'
+import classNames from 'classnames'
+import PropTypes from 'prop-types'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
-import classNames from 'classnames'
 
 class LoveButton extends Component {
   isFavorite () {
@@ -12,11 +12,10 @@ class LoveButton extends Component {
     return favorites.find(favorite => favorite.id === character.id)
   }
   render () {
-    const { character, setFavorite } = this.props
     return (
       <button
         className={classNames({ love: true, loved: this.isFavorite() })}
-        onClick={() => { setFavorite(character) }}
+        onClick={() => { this.props.setFavorite(this.props.character) }}
       >
         <Icon icon="fas fa-heart" />
       </button>
@@ -26,6 +25,7 @@ class LoveButton extends Component {
 LoveButton.propTypes = {
   character: PropTypes.objectOf(Object).isRequired,
   setFavorite: PropTypes.func.isRequired,
+  favorites: PropTypes.arrayOf(Object).isRequired,
 }
 
 const mapDispatchToProps = dispatch => bindActionCreators({ setFavorite }, dispatch)
