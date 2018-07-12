@@ -13,12 +13,12 @@ Deseja ver a aplicação em funcionamento? [Clique aqui](https://fabriciojso.git
 - [Create React App](https://github.com/facebook/create-react-app) `v1.1.4` para a criação do projeto React;
 - [Redux](https://github.com/reduxjs/redux) `v4.0.0` para auxiliar no gerenciamento de estados compatilhados;
 - [Redux Saga](https://github.com/redux-saga/redux-saga) `0.16.0` foi utilizado para auxiliar no gerenciamento de ações assíncronas;
-- [Redux Multi](https://github.com/ashaffer/redux-multi) `0.1.12` utilizado para tornar possível o retorno de multiplos `dispatchs`
+- [Redux Multi](https://github.com/ashaffer/redux-multi) `0.1.12` utilizado para tornar possível o retorno de multiplos `dispatchs`;
 - [ESLint Pagarme](https://github.com/pagarme/react-style-guide) `1.4.0` para auxiliar nas regras de escrita de código JavaScript;
-- [React Infinite Scroller](https://github.com/CassetteRocks/react-infinite-scroller) `1.2.0`Para auxiliar na implementação do scroll infinito.
-- [Jest](https://github.com/facebook/jest/) `23.3` Para implementar os testes automatizados;
+- [React Infinite Scroller](https://github.com/CassetteRocks/react-infinite-scroller) `1.2.0` para auxiliar na implementação do scroll infinito;
+- [Jest](https://github.com/facebook/jest/) `23.3` para implementar os testes automatizados;
 - [Enzyme](https://github.com/airbnb/enzyme) `3.3.0` Biblioteca criada pelo Airbnb para auxiliar na criação de testes com React;
-- [Puppeteer](https://github.com/GoogleChrome/puppeteer) `1.5.0` foi utilizado para auxiliar na implementação de testes e2e (end-to-end)
+- [Puppeteer](https://github.com/GoogleChrome/puppeteer) `1.5.0` foi utilizado para auxiliar na implementação de testes e2e (end-to-end);
 - [Travis CI](https://travis-ci.com/fabriciojso/luizalabs-desafio) ferramenta de integração continua.
 
 ## Como executar
@@ -27,7 +27,7 @@ Deseja ver a aplicação em funcionamento? [Clique aqui](https://fabriciojso.git
 git clone https://github.com/fabriciojso/luizalabs-desafio.git
 ```
 
-#### 2 - Acesse a pasta `./luizalabs-desafio` e instale as dependencias:
+#### 2 - Acesse a pasta `./luizalabs-desafio` e instale as dependências:
 ```bash
 npm install
 ```

@@ -46,11 +46,9 @@ class GenericList extends Component {
       return <Loading />
     }
     return (
-      <div>
+      <div className="result">
         <If test={this.getItems().length > 0}>
           <h3>{title}</h3>
-
-
           <InfiniteScroll
             pageStart={0}
             element="div"
