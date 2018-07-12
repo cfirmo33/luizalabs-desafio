@@ -1,19 +1,15 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-
 import Menu from './Menu'
 import MenuItem from './Menu/Item'
 import Search from './Search'
 import If from '../Helper/If'
-
 import { Link, withRouter } from 'react-router-dom'
-
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import { listFavorites } from '../../../store/favorite/actions'
 import { sendNotification } from '../../../store/notification/actions'
 import NotificationTypes from '../../../store/notification/notificationTypes'
-
 
 class Header extends Component {
   constructor (props) {

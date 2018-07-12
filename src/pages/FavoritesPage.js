@@ -1,11 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { connect } from 'react-redux'
+import { Redirect } from 'react-router-dom'
 
 import PageTemplate from '../components/templates/PageTemplate'
 import CharacterList from '../components/Character/List'
-
-import { connect } from 'react-redux'
-import { Redirect } from 'react-router-dom'
 
 const FavoritesPage = ({ characters }) => {
   if (characters.length > 0) {

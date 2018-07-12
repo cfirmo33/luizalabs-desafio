@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
-import Icon from '../Icon'
-import { setFavorite } from '../../../store/favorite/actions'
 import classNames from 'classnames'
 import PropTypes from 'prop-types'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
+
+import Icon from '../Icon'
+import { setFavorite } from '../../../store/favorite/actions'
 
 class LoveButton extends Component {
   isFavorite () {
@@ -22,6 +23,7 @@ class LoveButton extends Component {
     )
   }
 }
+
 LoveButton.propTypes = {
   character: PropTypes.objectOf(Object).isRequired,
   setFavorite: PropTypes.func.isRequired,

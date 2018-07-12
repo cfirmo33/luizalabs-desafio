@@ -5,6 +5,7 @@ Uma aplicação web com a lista de diversos heróis da marvel, feito com React, 
 
 ## Demonstração
 Deseja ver a aplicação em funcionamento? [Clique aqui](https://fabriciojso.github.io/luizalabs-desafio/#/)
+
 [![GIF](https://i.gyazo.com/b4bba2488184ebec38161d1799b973cc.gif)](https://fabriciojso.github.io/luizalabs-desafio/#/)
 
 ## Tecnologias
@@ -21,7 +22,7 @@ Deseja ver a aplicação em funcionamento? [Clique aqui](https://fabriciojso.git
 - [Travis CI](https://travis-ci.com/fabriciojso/luizalabs-desafio) ferramenta de integração continua.
 
 ## Importante
-A `Marvel API` tem um **limite** de `3.000` solicitações por dia. Caso esse limite seja atingido é necessário alterar as chaves que se encontram no seguinte local, [clique aqui](https://www.marvel.com/signin?referer=https%3A%2F%2Fdeveloper.marvel.com%2Faccount) para criar sua conta no `Developer Marvel`:
+A `Marvel API` tem um **limite** de `3.000` solicitações por dia. Caso esse limite seja atingido é necessário alterar as chaves que se encontram no local informado abaixo. [Clique aqui](https://www.marvel.com/signin?referer=https%3A%2F%2Fdeveloper.marvel.com%2Faccount) para criar sua conta no `Developer Marvel`:
 ```
 /src/services/Marvel/api.js
 ```

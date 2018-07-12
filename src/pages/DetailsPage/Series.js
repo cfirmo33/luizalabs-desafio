@@ -1,9 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import GenericList from './GenericList'
-import { requestDetailSeries } from '../../store/character/actions'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
+
+import GenericList from './GenericList'
+import { requestDetailSeries } from '../../store/character/actions'
 
 const Comics = props => (
   <GenericList

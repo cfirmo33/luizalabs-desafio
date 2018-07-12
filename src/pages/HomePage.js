@@ -1,18 +1,15 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import { bindActionCreators } from 'redux'
+import { connect } from 'react-redux'
+import InfiniteScroll from 'react-infinite-scroller'
 
 import PageTemplate from '../components/templates/PageTemplate'
 import Loading from '../components/Layout/Loading'
 import CharacterList from '../components/Character/List'
-import InfiniteScroll from 'react-infinite-scroller'
-
-import { bindActionCreators } from 'redux'
-import { connect } from 'react-redux'
 import { requestList } from '../store/character/actions'
 import { sendNotification } from '../store/notification/actions'
-
 import NotificationTypes from '../store/notification/notificationTypes'
-
 import If from '../components/Layout/Helper/If'
 
 class HomePage extends Component {

@@ -1,22 +1,20 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import classNames from 'classnames'
+import { bindActionCreators } from 'redux'
+import { connect } from 'react-redux'
 import { Link, HashRouter, Switch, Route } from 'react-router-dom'
 
 import PageTemplate from '../../components/templates/PageTemplate'
+import Loading from '../../components/Layout/Loading'
+import LoveButton from '../../components/Layout/LoveButton'
+import { image } from '../../services/Marvel/api'
+import { requestItem } from '../../store/character/actions'
+import { sendNotification } from '../../store/notification/actions'
+import Events from './Events'
 import Overview from './Overview'
 import Comics from './Comics'
 import Series from './Series'
-import Loading from '../../components/Layout/Loading'
-import Events from './Events'
-import LoveButton from '../../components/Layout/LoveButton'
-import classNames from 'classnames'
-
-import { bindActionCreators } from 'redux'
-import { connect } from 'react-redux'
-import { image } from '../../services/Marvel/api'
-import { requestItem } from '../../store/character/actions'
-
-import { sendNotification } from '../../store/notification/actions'
 
 class DetailsPage extends Component {
   componentDidMount () {

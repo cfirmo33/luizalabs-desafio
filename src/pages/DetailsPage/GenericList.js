@@ -1,11 +1,10 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
+
 import { sendNotification } from '../../store/notification/actions'
 import NotificationTypes from '../../store/notification/notificationTypes'
-
 import { image } from '../../services/Marvel/api'
 import InfiniteScroll from 'react-infinite-scroller'
 import Loading from '../../components/Layout/Loading'
@@ -54,7 +53,7 @@ class GenericList extends Component {
             element="div"
             loadMore={(page) => {
               this.props.fetchList(character.id, page)
-          }}
+            }}
             hasMore={this.hasMore()}
             threshold={400}
             useWindow
@@ -62,13 +61,13 @@ class GenericList extends Component {
           >
             <div className="grid-items">
               {
-            this.getItems().map(item => (
-              <div className="item" key={item.id}>
-                <img src={image(`${item.thumbnail.path}.${item.thumbnail.extension}`)} alt={item.title} />
-                <h5>{item.title}</h5>
-              </div>
-            ))
-          }
+                this.getItems().map(item => (
+                  <div className="item" key={item.id}>
+                    <img src={image(`${item.thumbnail.path}.${item.thumbnail.extension}`)} alt={item.title} />
+                    <h5>{item.title}</h5>
+                  </div>
+                ))
+              }
             </div>
           </InfiniteScroll>
         </If>

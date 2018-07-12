@@ -7,7 +7,6 @@ const If = ({ test, children }) => {
   return false
 }
 
-
 If.propTypes = {
   test: PropTypes.bool.isRequired,
   /* eslint-disable react/forbid-prop-types */
@@ -17,4 +16,5 @@ If.propTypes = {
 If.defaultTypes = {
   test: false,
 }
+
 export default If
