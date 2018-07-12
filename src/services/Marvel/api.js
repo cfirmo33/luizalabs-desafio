@@ -2,10 +2,9 @@ import { create } from 'apisauce'
 import md5 from 'blueimp-md5'
 import addParam from 'append-query'
 
-const publicKey = 'fba222cafbdc409f768cb548e344e409'
-const privateKey = 'f4383981871bf44e1c0c9b1725b45c2393294ebf'
+const publicKey = 'bf2f1b6273accb01a1454acda038a5b3'
+const privateKey = '5819bf0eb85a64156cd5bffa548e1bcaadf891c0'
 const URL = '//gateway.marvel.com/v1'
-// export const image = imageUrl => generateUrl(imageUrl.replace('http://', 'https://'))
 
 const createAPI = () => {
   const ts = 1
@@ -20,7 +19,6 @@ const createAPI = () => {
   })
 }
 const api = createAPI()
-
 
 const generateUrl = (url) => {
   const ts = 1

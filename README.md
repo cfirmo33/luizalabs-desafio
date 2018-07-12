@@ -3,11 +3,10 @@ Uma aplicação web com a lista de diversos heróis da marvel, feito com React, 
 
 [![Build Status](https://travis-ci.com/fabriciojso/luizalabs-desafio.svg?token=3dZSp4x5xxwAqpKZDQTe&branch=master)](https://travis-ci.com/fabriciojso/luizalabs-desafio)
 
-
 ## Demonstração
 Deseja ver a aplicação em funcionamento? [Clique aqui](https://fabriciojso.github.io/luizalabs-desafio/#/)
-
 [![GIF](https://i.gyazo.com/b4bba2488184ebec38161d1799b973cc.gif)](https://fabriciojso.github.io/luizalabs-desafio/#/)
+
 ## Tecnologias
 - [React](https://github.com/facebook/react/) `v16.4.1` para a componentização do projeto;
 - [Create React App](https://github.com/facebook/create-react-app) `v1.1.4` para a criação do projeto React;
@@ -20,6 +19,17 @@ Deseja ver a aplicação em funcionamento? [Clique aqui](https://fabriciojso.git
 - [Enzyme](https://github.com/airbnb/enzyme) `3.3.0` Biblioteca criada pelo Airbnb para auxiliar na criação de testes com React;
 - [Puppeteer](https://github.com/GoogleChrome/puppeteer) `1.5.0` foi utilizado para auxiliar na implementação de testes e2e (end-to-end);
 - [Travis CI](https://travis-ci.com/fabriciojso/luizalabs-desafio) ferramenta de integração continua.
+
+## Importante
+A `Marvel API` tem um **limite** de `3.000` solicitações por dia. Caso esse limite seja atingido é necessário alterar as chaves que se encontram no seguinte local, [clique aqui](https://www.marvel.com/signin?referer=https%3A%2F%2Fdeveloper.marvel.com%2Faccount) para criar sua conta no `Developer Marvel`:
+```
+/src/services/Marvel/api.js
+```
+Neste arquivo encontra-se a chave publica e privada:
+```js
+const publicKey  = 'xxxxxxxxx'
+const privateKey = 'yyyyyyyyy'
+```
 
 ## Testes End-to-End
 Para a implementação dos testes End-to-End (e2e) foi utilizado a biblioteca `Puppeteer`, que permite acessar um website e executar ações no mesmo. Os testes e2e se encontram no seguinte caminho ([clique aqui](https://github.com/fabriciojso/luizalabs-desafio/blob/master/src/pages/e2e.test.js)):
