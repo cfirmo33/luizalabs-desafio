@@ -2,7 +2,7 @@
   "name": "csh-web",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://fabriciojso.github.io/luizalabs-desafio-csh",
+  "homepage": "https://fabriciojso.github.io/luizalabs-desafio",
   "dependencies": {
     "apisauce": "^0.15.2",
     "append-query": "^2.0.1",

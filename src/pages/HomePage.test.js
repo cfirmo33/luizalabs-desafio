@@ -1,5 +1,6 @@
 import { launch } from 'puppeteer'
 
+const URL = 'https://fabriciojso.github.io/luizalabs-desafio/'
 describe('Página inicial', () => {
   it('Adicionando um item nos favoritos', async () => {
     const browser = await launch({
@@ -15,7 +16,7 @@ describe('Página inicial', () => {
       userAgent: '',
     })
 
-    await page.goto('http://localhost:3000/')
+    await page.goto(URL)
 
     await page.waitForSelector('div.lista-de-personagens > div:nth-child(1) > button')
     await page.click('div.lista-de-personagens > div:nth-child(1) > button')
@@ -38,7 +39,7 @@ describe('Página inicial', () => {
       userAgent: '',
     })
 
-    await page.goto('http://localhost:3000/')
+    await page.goto(URL)
     const searchInput = await page.$('.search-bar > input[type="text"]')
     await searchInput.type('captain')
 
@@ -64,7 +65,7 @@ describe('Página inicial', () => {
       userAgent: '',
     })
 
-    await page.goto('http://localhost:3000/')
+    await page.goto(URL)
     await page.waitForSelector('div.lista-de-personagens > div:nth-child(1) > button')
     await page.click('div.lista-de-personagens > div:nth-child(1) > button')
     await page.click('div.lista-de-personagens > div:nth-child(2) > button')
