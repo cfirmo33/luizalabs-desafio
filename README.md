@@ -7,7 +7,7 @@
 ## Demonstração
 Deseja ver a aplicação em funcionamento? [Clique aqui](https://fabriciojso.github.io/luizalabs-desafio/#/)
 
-[![GIF](https://i.gyazo.com/62445010cbdd16c1bfee5a9a2359d18b.gif)](https://fabriciojso.github.io/luizalabs-desafio/#/)
+[![GIF](https://i.gyazo.com/b4bba2488184ebec38161d1799b973cc.gif)](https://fabriciojso.github.io/luizalabs-desafio/#/)
 ## Tecnologias
 - [React](https://github.com/facebook/react/) `v16.4.1` para a componentização do projeto;
 - [Create React App](https://github.com/facebook/create-react-app) `v1.1.4` para a criação do projeto React;
@@ -56,11 +56,3 @@ npm run test
 - [x] Listagem de super heróis;
 - [x] Layout responsivo;
 - [x] Redux com Redux Saga;
-
-
-
-
-
-
-
-
