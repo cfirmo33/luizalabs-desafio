@@ -4,7 +4,6 @@ sudo: required
 addons:
   apt:
     packages:
-      # This is required to run new chrome on old trusty
       - libnss3
   chrome: stable
 
@@ -12,5 +11,5 @@ node_js:
   - "8"
 script:
   - npm test
-after_script: # Upload coverage reports 
+after_script:
   - COVERALLS_REPO_TOKEN=$coveralls_repo_token npm run coveralls

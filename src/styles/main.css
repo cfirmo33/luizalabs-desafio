@@ -42,7 +42,7 @@ table {
 
 body {
   background: #202025;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   padding-top: 100px; }
   @media (max-width: 767px) {
     body {
@@ -89,56 +89,60 @@ body {
         align-items: center;
         justify-content: center;
         width: 95%; } }
-  .menu-bar h1.logo, .menu-bar h1.logo a {
+  .menu-bar h1.logo,
+  .menu-bar h1.logo a {
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 30px;
-    color: #FFF;
+    color: #fff;
     font-weight: 600;
     text-decoration: none;
     height: 100%;
     padding: 0px 5px;
     margin-right: 20px; }
     @media (max-width: 767px), (min-width: 768px) and (max-width: 1023px) {
-      .menu-bar h1.logo, .menu-bar h1.logo a {
+      .menu-bar h1.logo,
+      .menu-bar h1.logo a {
         display: none; } }
-  .menu-bar nav ul {
-    display: flex; }
-    @media (max-width: 767px) {
-      .menu-bar nav ul {
-        margin-bottom: 20px;
-        margin-top: 10px; } }
-    .menu-bar nav ul li {
-      width: 100%;
-      text-align: center;
-      margin-right: 20px; }
-      .menu-bar nav ul li a {
-        display: flex;
-        color: #b3b3b3;
-        text-decoration: none;
-        font-size: 14px;
-        font-weight: 600;
-        text-transform: uppercase;
-        padding-bottom: 5px;
-        border-bottom: 2px solid transparent;
-        transition: 300ms ease all; }
-        .menu-bar nav ul li a small {
-          display: table;
-          background-color: #FF000C;
-          padding: 0px 6px;
-          height: 20px;
-          line-height: 20px;
-          text-align: center;
-          border-radius: 50px;
-          color: #FFF;
-          margin-top: -5px;
-          margin-left: 5px;
-          font-weight: 400;
+  .menu-bar nav {
+    margin-top: 10px; }
+    .menu-bar nav ul {
+      display: flex; }
+      @media (max-width: 767px) {
+        .menu-bar nav ul {
+          margin-bottom: 20px;
+          margin-top: 10px; } }
+      .menu-bar nav ul li {
+        width: 100%;
+        text-align: center;
+        margin-right: 20px; }
+        .menu-bar nav ul li a {
+          display: flex;
+          color: #b3b3b3;
+          text-decoration: none;
+          font-size: 14px;
+          font-weight: 600;
+          text-transform: uppercase;
+          padding-bottom: 5px;
+          border-bottom: 2px solid transparent;
           transition: 300ms ease all; }
-        .menu-bar nav ul li a.active, .menu-bar nav ul li a:hover {
-          color: #FFF;
-          border-color: #FF000C; }
+          .menu-bar nav ul li a small {
+            display: table;
+            background-color: #ff000c;
+            padding: 0px 6px;
+            height: 20px;
+            line-height: 20px;
+            text-align: center;
+            border-radius: 50px;
+            color: #fff;
+            margin-top: -5px;
+            margin-left: 5px;
+            font-weight: 400;
+            transition: 300ms ease all; }
+          .menu-bar nav ul li a.active, .menu-bar nav ul li a:hover {
+            color: #fff;
+            border-color: #ff000c; }
   .menu-bar .search-bar {
     position: relative;
     display: flex;
@@ -164,7 +168,7 @@ body {
       padding-left: 40px;
       box-sizing: border-box;
       font-size: 14px;
-      color: #CCC; }
+      color: #ccc; }
       .menu-bar .search-bar input::placeholder {
         color: #4f4f4f;
         font-weight: 700;
@@ -190,29 +194,40 @@ main {
 
 .love {
   font-size: 16px;
-  color: #FFF;
+  color: #fff;
   margin-top: 20px;
   font-weight: 200;
-  padding: 10px;
-  border: 1px solid #FFF;
+  height: 40px;
+  width: 40px;
+  border: 1px solid #fff;
   border-radius: 100px;
   background-color: rgba(0, 0, 0, 0.603);
   opacity: 1;
   cursor: pointer;
   transition: ease 300ms all; }
+  .love:focus {
+    outline: none; }
   .love:hover {
-    border-color: #FF000C;
-    color: #FF000C; }
+    border-color: #ff000c;
+    color: #ff000c; }
     @media (max-width: 767px), (min-width: 768px) and (max-width: 1023px) {
       .love:hover, .love:hover:focus {
-        border-color: #FFF;
-        color: #FFF; } }
+        border-color: #fff;
+        color: #fff; } }
   .love.loved {
     opacity: 1;
-    background-color: #FF000C;
-    color: #FFF; }
+    background-color: #ff000c;
+    color: #fff; }
     .love.loved:hover {
-      color: #FFF; }
+      color: #fff; }
+
+.none-items {
+  font-size: 18px;
+  margin-top: 40px;
+  font-weight: 300;
+  line-height: 26px;
+  color: #8f8f8f;
+  text-align: center; }
 
 .lista-de-personagens {
   display: grid;
@@ -239,7 +254,8 @@ main {
     transition: 300ms ease all;
     cursor: pointer;
     overflow: hidden;
-    background-image: none; }
+    background-image: none;
+    background-position: bottom center; }
     .lista-de-personagens .item .love {
       position: absolute;
       z-index: 1;
@@ -271,7 +287,7 @@ main {
           background-color: transparent; } }
     .lista-de-personagens .item h1 {
       font-size: 24px;
-      color: #FFF;
+      color: #fff;
       font-weight: 300;
       margin-bottom: 20px; }
     .lista-de-personagens .item:hover {
@@ -314,7 +330,7 @@ button.more {
   background: #2a2931;
   border: 1px solid #3e3c48;
   cursor: pointer;
-  color: #CCC;
+  color: #ccc;
   font-weight: 600;
   font-size: 18px;
   border-radius: 5px; }
@@ -337,7 +353,7 @@ button.more {
       font-size: 40px;
       color: #f6f6f6;
       font-weight: 700;
-      border-left: 5px solid #FF000C;
+      border-left: 5px solid #ff000c;
       padding-left: 10px;
       margin-bottom: 50px; }
       .details .content-details h1 .love {
@@ -370,31 +386,37 @@ button.more {
           text-decoration: none;
           font-size: 20px;
           font-weight: 300;
-          color: #FFF;
+          color: #fff;
           text-transform: uppercase;
           border-bottom: 3px solid #202025;
           padding: 0px 5px;
           padding-bottom: 10px;
           transition: 300ms ease all; }
           .details .content-details .menu-details li a:hover, .details .content-details .menu-details li a.active {
-            border-bottom: 3px solid #FF000C; }
+            border-bottom: 3px solid #ff000c; }
           @media (max-width: 767px) {
             .details .content-details .menu-details li a {
               font-size: 14px; } }
+    .details .content-details .content-internal-details .none-items {
+      font-size: 18px;
+      margin-top: 40px;
+      font-weight: 300;
+      line-height: 26px;
+      color: #8f8f8f; }
     .details .content-details .content-internal-details h3 {
       font-size: 20px;
       font-weight: 600;
       color: #f6f6f6;
       margin-bottom: 10px;
       margin-top: 30px;
-      border-left: 3px solid #FF000C;
+      border-left: 3px solid #ff000c;
       padding-left: 10px; }
       @media (max-width: 767px) {
         .details .content-details .content-internal-details h3 {
           font-size: 16px; } }
     .details .content-details .content-internal-details p {
       font-size: 14px;
-      color: #CCC;
+      color: #ccc;
       line-height: 18px;
       text-align: justify; }
     .details .content-details .content-internal-details .links {
@@ -416,7 +438,7 @@ button.more {
           justify-content: center;
           padding: 0px 20px;
           height: 40px;
-          background-color: #b1b1d2;
+          background-color: #CCC;
           color: #000;
           font-weight: 700;
           text-decoration: none;
@@ -429,7 +451,7 @@ button.more {
             margin-top: -5px;
             font-size: 18px; }
           .details .content-details .content-internal-details .links li a:hover {
-            background-color: #FFF; }
+            background-color: #fff; }
     .details .content-details .content-internal-details .grid-items {
       display: grid;
       grid-template-columns: repeat(5, 1fr);
@@ -452,13 +474,14 @@ button.more {
       .details .content-details .content-internal-details .grid-items .item h5 {
         font-size: 12px;
         line-height: 16px;
-        color: #FFF;
+        color: #fff;
         font-weight: 400;
         text-align: justify; }
   .details figure {
     display: table;
     width: 300px;
     height: 300px;
+    border: 4px solid #3b3b42;
     border-radius: 100%;
     overflow: hidden;
     background-size: cover;
@@ -478,7 +501,8 @@ button.more {
         height: 200px;
         border-radius: 5px;
         order: -1;
-        margin-top: -5px; }
+        margin-top: -5px;
+        border: none; }
         .details figure .shadow {
           display: table;
           position: relative;

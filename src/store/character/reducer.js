@@ -32,6 +32,7 @@ const requestCharacterItem = state => ({
 const successCharacterItem = (state, action) => ({
   ...state,
   fetching: false,
+  list: INITIAL_STATE.list,
   character: action.payload.data.results[0],
 })
 

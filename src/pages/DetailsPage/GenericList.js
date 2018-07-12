@@ -7,6 +7,7 @@ import NotificationTypes from '../../store/notification/notificationTypes'
 import { image } from '../../helpers/marvelApi'
 import InfiniteScroll from 'react-infinite-scroller'
 import Loading from '../../components/Layout/Loading'
+import If from '../../components/Layout/Helper/If'
 
 class GenericList extends Component {
   constructor (props) {
@@ -21,7 +22,6 @@ class GenericList extends Component {
 
   getItems () {
     const { offset } = this.props.result
-    console.log(this.props.result)
     if (offset === 0) {
       this.items = []
     }
@@ -37,7 +37,6 @@ class GenericList extends Component {
   render () {
     const {
       character,
-      result,
       title,
       notification,
     } = this.props
@@ -46,12 +45,16 @@ class GenericList extends Component {
     }
     return (
       <div>
-        <h3>{title}</h3>
+        <If test={this.getItems().length > 0}>
+          <h3>{title}</h3>
+        </If>
+        <If test={this.getItems().length === 0}>
+          <h4 className="none-items">Nenhum item encontrado para este personagem.</h4>
+        </If>
         <InfiniteScroll
           pageStart={0}
           element="div"
           loadMore={(page) => {
-            console.log(page)
               this.props.fetchList(character.id, page)
           }}
           hasMore={this.hasMore()}

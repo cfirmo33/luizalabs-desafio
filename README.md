@@ -44,6 +44,7 @@ npm run test
 
 ## Checklist
 - [ ] 100% de coverage nos testes;
+- [ ] Usar [Flow](https://flow.org) para checagem estática de tipos;
 - [x] Scroll infinito;
 - [x] Implementação de Testes End-to-End;
 - [x] Implementação de Testes de Unidade;

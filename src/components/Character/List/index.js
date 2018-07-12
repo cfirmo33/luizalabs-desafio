@@ -10,8 +10,8 @@ const List = ({ characters }) => (
        <CharacterItem
          character={character}
          name={character.name}
-         image={image(`${character.thumbnail.path}/landscape_incredible.${character.thumbnail.extension}`)}
-         key={character.id}
+         image={image(`${character.thumbnail.path}/standard_fantastic.${character.thumbnail.extension}`)}
+         key={Math.random()}
        />
       ))
     }

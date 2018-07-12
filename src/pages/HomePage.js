@@ -47,7 +47,7 @@ class HomePage extends Component {
   renderCharacters () {
     const { characters } = this.props
 
-    if (this.props.page === 0) {
+    if (this.props.result.offset === 0) {
       this.items = []
     }
     this.items = this.items.concat(characters)
@@ -66,6 +66,14 @@ class HomePage extends Component {
             <Loading />
           </If>
 
+          <If test={(
+            this.props.notification !== NotificationTypes.LOADING_HOME_NOTIFICATION &&
+            this.renderCharacters().length === 0
+          )}
+          >
+            <h4 className="none-items">Nenhum personagem encontrado.</h4>
+          </If>
+
           <If test={this.props.notification !== NotificationTypes.LOADING_HOME_NOTIFICATION}>
             <InfiniteScroll
               pageStart={0}
@@ -77,6 +85,7 @@ class HomePage extends Component {
               threshold={400}
               useWindow
               loader={<Loading key={0} />}
+              async
             >
               <CharacterList characters={this.renderCharacters()} />
             </InfiniteScroll>

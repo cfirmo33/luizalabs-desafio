@@ -35,6 +35,7 @@ class Header extends Component {
     }
   }
 
+
   componentDidMount () {
     this.props.listFavorites()
   }
@@ -64,11 +65,12 @@ class Header extends Component {
 
   render () {
     const { favorites } = this.props
+
     return (
       <div className="menu-bar">
         <div className="intent">
           <h1 className="logo">
-            <Link to="/">Heroes</Link>
+            <Link to="/">Marvel</Link>
           </h1>
 
           <Menu>
@@ -96,6 +98,7 @@ Header.propTypes = {
 
 const mapStateToProps = state => ({
   favorites: state.favorite.list,
+  notification: state.notification.message,
 })
 
 const mapDispatchToProps = dispatch => bindActionCreators({
