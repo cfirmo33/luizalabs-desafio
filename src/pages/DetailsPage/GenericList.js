@@ -1,11 +1,12 @@
 import React, { Component } from 'react'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
-import { sendNotify } from '../../redux/character/actions'
+import { sendNotification } from '../../store/notification/actions'
+import NotificationTypes from '../../store/notification/notificationTypes'
+
 import { image } from '../../helpers/marvelApi'
 import InfiniteScroll from 'react-infinite-scroller'
 import Loading from '../../components/Layout/Loading'
-import { LOADING_DETAILS_INTERNAL_NOTIFICATION } from '../../redux/character/notifications'
 
 class GenericList extends Component {
   constructor (props) {
@@ -14,12 +15,13 @@ class GenericList extends Component {
   }
   componentDidMount () {
     const { character } = this.props
-    this.props.sendNotify(LOADING_DETAILS_INTERNAL_NOTIFICATION)
+    this.props.sendNotification(NotificationTypes.LOADING_DETAILS_PAGE_NOTIFICATION)
     this.props.fetchList(character.id)
   }
 
   getItems () {
     const { offset } = this.props.result
+    console.log(this.props.result)
     if (offset === 0) {
       this.items = []
     }
@@ -33,8 +35,13 @@ class GenericList extends Component {
   }
 
   render () {
-    const { character, notification, title } = this.props
-    if (notification === LOADING_DETAILS_INTERNAL_NOTIFICATION) {
+    const {
+      character,
+      result,
+      title,
+      notification,
+    } = this.props
+    if (notification === NotificationTypes.LOADING_DETAILS_PAGE_NOTIFICATION) {
       return <Loading />
     }
     return (
@@ -44,6 +51,7 @@ class GenericList extends Component {
           pageStart={0}
           element="div"
           loadMore={(page) => {
+            console.log(page)
               this.props.fetchList(character.id, page)
           }}
           hasMore={this.hasMore()}
@@ -68,10 +76,12 @@ class GenericList extends Component {
 }
 
 const mapStateToProps = state => ({
-  notification: state.characters.notification,
-  list: state.characters.genericList.results,
-  result: state.characters.genericList,
+  list: state.character.details.results,
+  result: state.character.details,
+  notification: state.notification.message,
 })
 
-const mapDispatchToProps = dispatch => bindActionCreators({ sendNotify }, dispatch)
+const mapDispatchToProps = dispatch => bindActionCreators({
+  sendNotification,
+}, dispatch)
 export default connect(mapStateToProps, mapDispatchToProps)(GenericList)

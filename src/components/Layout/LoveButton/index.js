@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Icon from '../Icon'
-import { setFavorite } from '../../../redux/character/actions'
+import { setFavorite } from '../../../store/favorite/actions'
 import classNames from 'classnames'
 import PropTypes from 'prop-types'
 import { bindActionCreators } from 'redux'
@@ -29,5 +29,5 @@ LoveButton.propTypes = {
 }
 
 const mapDispatchToProps = dispatch => bindActionCreators({ setFavorite }, dispatch)
-const mapStateToProps = state => ({ favorites: state.characters.favorites })
+const mapStateToProps = state => ({ favorites: state.favorite.list })
 export default connect(mapStateToProps, mapDispatchToProps)(LoveButton)

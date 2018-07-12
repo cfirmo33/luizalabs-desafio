@@ -1,3 +1,4 @@
+
 import React from 'react'
 import ReactDOM from 'react-dom'
 import './styles/main.css'
@@ -9,7 +10,7 @@ import DetailsPage from './pages/DetailsPage'
 import registerServiceWorker from './registerServiceWorker'
 import { HashRouter, Route, Switch } from 'react-router-dom'
 import { Provider } from 'react-redux'
-import store from './redux/createStore'
+import store from './store'
 
 ReactDOM.render(
   <Provider store={store}>

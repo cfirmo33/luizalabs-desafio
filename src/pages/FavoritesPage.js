@@ -27,5 +27,5 @@ FavoritesPage.propTypes = {
   characters: PropTypes.arrayOf(Object).isRequired,
 }
 
-const mapStateToProps = state => ({ characters: state.characters.favorites })
+const mapStateToProps = state => ({ characters: state.favorite.list })
 export default connect(mapStateToProps)(FavoritesPage)

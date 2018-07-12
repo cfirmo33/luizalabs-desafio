@@ -10,8 +10,10 @@ import { Link, withRouter } from 'react-router-dom'
 
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
-import { getFavorites, fetchCharacters, sendNotify } from '../../../redux/character/actions'
-import { LOADING_HOME_NOTIFICATION } from '../../../redux/character/notifications'
+import { listFavorites } from '../../../store/favorite/actions'
+import { requestList } from '../../../store/character/actions'
+import { sendNotification } from '../../../store/notification/actions'
+import NotificationTypes from '../../../store/notification/notificationTypes'
 
 
 class Header extends Component {
@@ -34,7 +36,7 @@ class Header extends Component {
   }
 
   componentDidMount () {
-    this.props.getFavorites()
+    this.props.listFavorites()
   }
 
   handleChangeSearch ({ target: { value } }) {
@@ -51,12 +53,12 @@ class Header extends Component {
     }
     this.timeout = setTimeout(() => {
       if (this.state.search.length > 0) {
+        this.props.sendNotification(NotificationTypes.LOADING_HOME_NOTIFICATION)
         this.props.history.push(`/search/${this.state.search}`)
-        this.props.sendNotify(LOADING_HOME_NOTIFICATION)
       } else {
         this.props.history.push('/')
       }
-    }, 700)
+    }, 400)
   }
 
 
@@ -87,19 +89,19 @@ class Header extends Component {
 }
 
 Header.propTypes = {
-  getFavorites: PropTypes.func.isRequired,
-  fetchCharacters: PropTypes.func.isRequired,
+  listFavorites: PropTypes.func.isRequired,
+  requestList: PropTypes.func.isRequired,
   favorites: PropTypes.arrayOf(Object).isRequired,
 }
 
 const mapStateToProps = state => ({
-  favorites: state.characters.favorites,
+  favorites: state.favorite.list,
 })
 
 const mapDispatchToProps = dispatch => bindActionCreators({
-  getFavorites,
-  fetchCharacters,
-  sendNotify,
+  listFavorites,
+  requestList,
+  sendNotification,
 }, dispatch)
 
 export default connect(mapStateToProps, mapDispatchToProps)(withRouter(Header))

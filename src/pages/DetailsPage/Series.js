@@ -1,16 +1,16 @@
 import React from 'react'
 import GenericList from './GenericList'
-import { fetchSeries } from '../../redux/character/actions'
+import { requestDetailSeries } from '../../store/character/actions'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
-const Comics = ({ character, fetchSeries }) => (
+const Comics = ({ character, requestDetailSeries }) => (
   <GenericList
     character={character}
-    fetchList={fetchSeries}
+    fetchList={requestDetailSeries}
     title="Lista de Séries"
   />
 )
 
-const mapDispatchToProps = dispatch => bindActionCreators({ fetchSeries }, dispatch)
+const mapDispatchToProps = dispatch => bindActionCreators({ requestDetailSeries }, dispatch)
 export default connect(null, mapDispatchToProps)(Comics)

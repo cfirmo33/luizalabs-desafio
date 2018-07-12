@@ -9,25 +9,25 @@ import Series from './Series'
 import Loading from '../../components/Layout/Loading'
 import Events from './Events'
 import LoveButton from '../../components/Layout/LoveButton'
-
 import classNames from 'classnames'
 
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
-import { fetchCharacter, sendNotify } from '../../redux/character/actions'
-import { LOADING_DETAILS_PAGE_NOTIFICATION } from '../../redux/character/notifications'
 import { image } from '../../helpers/marvelApi'
+import { requestItem } from '../../store/character/actions'
+
+import { sendNotification } from '../../store/notification/actions'
 
 
 class DetailsPage extends Component {
   componentDidMount () {
     const { match: { params: { id } } } = this.props
-    this.props.sendNotify(LOADING_DETAILS_PAGE_NOTIFICATION)
-    this.props.fetchCharacter(id)
+    this.props.requestItem(id)
   }
   render () {
-    const { match: { params: { id, page } }, character, notification } = this.props
-    if (notification === LOADING_DETAILS_PAGE_NOTIFICATION || character.name === undefined) {
+    const { match: { params: { id, page } }, character } = this.props
+
+    if (this.props.fetching || character.name === undefined) {
       return (
         <Loading />
       )
@@ -39,7 +39,7 @@ class DetailsPage extends Component {
           <div className="content-details">
             <h1>{character.name} <LoveButton character={character} /></h1>
             <ul className="menu-details">
-              <li><Link className={classNames({ active: page === 'overview' })} to={`/detail/${id}/overview`}>Overview</Link></li>
+              <li><Link className={classNames({ active: page === 'overview' })} to={`/detail/${id}/overview`}>Detalhes</Link></li>
               <li><Link className={classNames({ active: page === 'comics' })} to={`/detail/${id}/comics`}>Quadrinhos</Link></li>
               <li><Link className={classNames({ active: page === 'series' })} to={`/detail/${id}/series`}>Séries</Link></li>
               <li><Link className={classNames({ active: page === 'events' })} to={`/detail/${id}/events`}>Eventos</Link></li>
@@ -87,13 +87,13 @@ class DetailsPage extends Component {
 }
 
 const mapStateToProps = state => ({
-  character: state.characters.item,
-  notification: state.characters.notification,
+  character: state.character.character,
+  fetching: state.character.fetching,
 })
 
 const mapDispatchToProps = dispatch => bindActionCreators({
-  fetchCharacter,
-  sendNotify,
+  requestItem,
+  sendNotification,
 }, dispatch)
 
 export default connect(mapStateToProps, mapDispatchToProps)(DetailsPage)
