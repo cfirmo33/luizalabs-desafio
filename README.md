@@ -20,16 +20,16 @@ Deseja ver a aplicação em funcionamento? [Clique aqui](https://fabriciojso.git
 - [Puppeteer](https://github.com/GoogleChrome/puppeteer) `1.5.0` foi utilizado para auxiliar na implementação de testes e2e (end-to-end)
 
 ## Como executar
-### #1 Clone do repostório:
+##### #1 Clone do repostório:
 ```git clone https://github.com/fabriciojso/luizalabs-desafio.git```
 
-### #2 Acesse a pasta (`./luizalabs-desafio`) e instale as dependencias:
+#### #2 Acesse a pasta `./luizalabs-desafio` e instale as dependencias:
 ```npm install```
 
-### #3 Inicie o servidor local para acessar a aplicação:
+#### #3 Inicie o servidor local para acessar a aplicação:
 ```npm start```
 
-### #4 Para executar os testes execute o comando:
+#### #4 Para executar os testes execute o comando:
 ```npm run test```
 
 ## Checklist
