@@ -1,6 +1,6 @@
 import { launch } from 'puppeteer'
 
-const URL = 'http://localhost:3000'
+const URL = 'https://fabriciojso.github.io/luizalabs-desafio'
 describe('Testes End-to-End', () => {
   it('Adicionando um item nos favoritos', async () => {
     const browser = await launch({
