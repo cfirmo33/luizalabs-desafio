@@ -1486,7 +1486,7 @@ ShallowWrapper {
     "rendered": Array [
       Object {
         "instance": null,
-        "key": "1011334",
+        "key": "0",
         "nodeType": "function",
         "props": Object {
           "character": Object {
@@ -1715,7 +1715,7 @@ ShallowWrapper {
       },
       Object {
         "instance": null,
-        "key": "1017100",
+        "key": "1",
         "nodeType": "function",
         "props": Object {
           "character": Object {
@@ -1778,7 +1778,7 @@ ShallowWrapper {
       },
       Object {
         "instance": null,
-        "key": "1009144",
+        "key": "2",
         "nodeType": "function",
         "props": Object {
           "character": Object {
@@ -2102,7 +2102,7 @@ ShallowWrapper {
       },
       Object {
         "instance": null,
-        "key": "1010699",
+        "key": "3",
         "nodeType": "function",
         "props": Object {
           "character": Object {
@@ -3005,7 +3005,7 @@ ShallowWrapper {
       "rendered": Array [
         Object {
           "instance": null,
-          "key": "1011334",
+          "key": "0",
           "nodeType": "function",
           "props": Object {
             "character": Object {
@@ -3234,7 +3234,7 @@ ShallowWrapper {
         },
         Object {
           "instance": null,
-          "key": "1017100",
+          "key": "1",
           "nodeType": "function",
           "props": Object {
             "character": Object {
@@ -3297,7 +3297,7 @@ ShallowWrapper {
         },
         Object {
           "instance": null,
-          "key": "1009144",
+          "key": "2",
           "nodeType": "function",
           "props": Object {
             "character": Object {
@@ -3621,7 +3621,7 @@ ShallowWrapper {
         },
         Object {
           "instance": null,
-          "key": "1010699",
+          "key": "3",
           "nodeType": "function",
           "props": Object {
             "character": Object {
