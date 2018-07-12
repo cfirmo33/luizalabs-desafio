@@ -6,6 +6,7 @@
 
 ## Demonstração
 Deseja ver a aplicação em funcionamento? [Clique aqui](https://fabriciojso.github.io/luizalabs-desafio/#/)
+
 [![GIF](https://i.gyazo.com/62445010cbdd16c1bfee5a9a2359d18b.gif)](https://fabriciojso.github.io/luizalabs-desafio/#/)
 ## Tecnologias
 - [React](https://github.com/facebook/react/) `v16.4.1` para a componentização do projeto;
@@ -18,6 +19,7 @@ Deseja ver a aplicação em funcionamento? [Clique aqui](https://fabriciojso.git
 - [Jest](https://github.com/facebook/jest/) `23.3` Para implementar os testes automatizados;
 - [Enzyme](https://github.com/airbnb/enzyme) `3.3.0` Biblioteca criada pelo Airbnb para auxiliar na criação de testes com React;
 - [Puppeteer](https://github.com/GoogleChrome/puppeteer) `1.5.0` foi utilizado para auxiliar na implementação de testes e2e (end-to-end)
+- [Travis CI](https://travis-ci.com/fabriciojso/luizalabs-desafio) ferramenta de integração continua.
 
 ## Como executar
 ##### 1 - Clone do repostório:
