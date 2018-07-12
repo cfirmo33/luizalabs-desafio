@@ -1,15 +1,12 @@
 >## Catálogo de super heróis da marvel
 > Uma aplicação web com a lista de diversos heróis da marvel, feito com React, Redux, Redux-Saga e Marvel API.
 
-
-
 [![Build Status](https://travis-ci.com/fabriciojso/luizalabs-desafio.svg?token=3dZSp4x5xxwAqpKZDQTe&branch=master)](https://travis-ci.com/fabriciojso/luizalabs-desafio)
 
 
 ## Demonstração
 Deseja ver a aplicação em funcionamento? [Clique aqui](https://fabriciojso.github.io/luizalabs-desafio/#/)
-[![GIF](https://i.gyazo.com/6c2dff1c704634c8443868516e2b9fd6.gif)]
-
+[![GIF](https://i.gyazo.com/62445010cbdd16c1bfee5a9a2359d18b.gif)](https://fabriciojso.github.io/luizalabs-desafio/#/)
 ## Tecnologias
 - [React](https://github.com/facebook/react/) `v16.4.1` para a componentização do projeto;
 - [Create React App](https://github.com/facebook/create-react-app) `v1.1.4` para a criação do projeto React;
