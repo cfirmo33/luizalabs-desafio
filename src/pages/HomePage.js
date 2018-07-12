@@ -90,7 +90,6 @@ class HomePage extends Component {
 HomePage.propTypes = {
   characters: PropTypes.arrayOf(Object).isRequired,
   requestList: PropTypes.func.isRequired,
-  fetching: PropTypes.bool.isRequired,
 }
 
 const mapStateToProps = ({ character, notification }) => ({
@@ -99,7 +98,6 @@ const mapStateToProps = ({ character, notification }) => ({
   result: character.list,
   search: character.list.search,
   page: character.list.page,
-  isClear: character.list.clear,
   notification: notification.message,
 })
 

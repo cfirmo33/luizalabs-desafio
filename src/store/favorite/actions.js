@@ -3,7 +3,7 @@ import store from 'store'
 
 export const listFavorites = () => ({
   type: Types.FAVORITE_LIST_SUCCESS,
-  payload: store.get('favorites'),
+  payload: store.get('favorites') || [],
 })
 
 export const setFavorite = (character) => {
