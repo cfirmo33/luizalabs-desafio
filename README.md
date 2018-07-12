@@ -1,5 +1,5 @@
->## Catálogo de super heróis da marvel
-> Uma aplicação web com a lista de diversos heróis da marvel, feito com React, Redux, Redux-Saga e Marvel API.
+## Catálogo de super heróis da marvel
+Uma aplicação web com a lista de diversos heróis da marvel, feito com React, Redux, Redux-Saga e Marvel API.
 
 [![Build Status](https://travis-ci.com/fabriciojso/luizalabs-desafio.svg?token=3dZSp4x5xxwAqpKZDQTe&branch=master)](https://travis-ci.com/fabriciojso/luizalabs-desafio)
 
@@ -22,7 +22,7 @@ Deseja ver a aplicação em funcionamento? [Clique aqui](https://fabriciojso.git
 - [Travis CI](https://travis-ci.com/fabriciojso/luizalabs-desafio) ferramenta de integração continua.
 
 ## Testes End-to-End
-Para a implementação dos testes End-to-End (e2e) foi utilizado a biblioteca `Puppeteer`, que permite acessar uma website e executar ações no mesmo. Os testes e2e se encontram no seguinte caminho ([clique aqui](https://github.com/fabriciojso/luizalabs-desafio/blob/master/src/pages/e2e.test.js)):
+Para a implementação dos testes End-to-End (e2e) foi utilizado a biblioteca `Puppeteer`, que permite acessar um website e executar ações no mesmo. Os testes e2e se encontram no seguinte caminho ([clique aqui](https://github.com/fabriciojso/luizalabs-desafio/blob/master/src/pages/e2e.test.js)):
 ```
 /src/pages/e2e.test.js
 ```

@@ -1,6 +1,6 @@
 import { launch } from 'puppeteer'
 
-const URL = 'https://fabriciojso.github.io/luizalabs-desafio'
+const URL = 'https://fabriciojso.github.io/luizalabs-desafio/#/'
 describe('Testes End-to-End', () => {
   it('Adicionando um item nos favoritos', async () => {
     const browser = await launch({
@@ -80,7 +80,7 @@ describe('Testes End-to-End', () => {
 
   it('Acessando um personagem e suas abas', async () => {
     const browser = await launch({
-      headless: false,
+      headless: true,
     })
     const page = await browser.newPage()
 
