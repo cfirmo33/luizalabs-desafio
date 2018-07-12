@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
+
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import { sendNotification } from '../../store/notification/actions'
@@ -76,6 +78,16 @@ class GenericList extends Component {
       </div>
     )
   }
+}
+
+GenericList.propTypes = {
+  character: PropTypes.objectOf(Object).isRequired,
+  sendNotification: PropTypes.func.isRequired,
+  fetchList: PropTypes.func.isRequired,
+  result: PropTypes.objectOf(Object).isRequired,
+  list: PropTypes.arrayOf(Object).isRequired,
+  title: PropTypes.string.isRequired,
+  notification: PropTypes.objectOf(Object).isRequired,
 }
 
 const mapStateToProps = state => ({

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-
+import PropTypes from 'prop-types'
 import { Link, HashRouter, Switch, Route } from 'react-router-dom'
 
 import PageTemplate from '../../components/templates/PageTemplate'
@@ -13,11 +13,10 @@ import classNames from 'classnames'
 
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
-import { image } from '../../helpers/marvelApi'
+import { image } from '../../services/Marvel/api'
 import { requestItem } from '../../store/character/actions'
 
 import { sendNotification } from '../../store/notification/actions'
-
 
 class DetailsPage extends Component {
   componentDidMount () {
@@ -84,6 +83,13 @@ class DetailsPage extends Component {
       </PageTemplate>
     )
   }
+}
+
+DetailsPage.propTypes = {
+  match: PropTypes.objectOf(Object).isRequired,
+  requestItem: PropTypes.func.isRequired,
+  character: PropTypes.objectOf(Object).isRequired,
+  fetching: PropTypes.bool.isRequired,
 }
 
 const mapStateToProps = state => ({

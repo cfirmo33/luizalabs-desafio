@@ -6,7 +6,7 @@ describe('Search', () => {
   it('Deve renderizar corretamente', () => {
     const value = ''
     const wrapper = shallow(
-      <Search value={value} onChange={(event) => { value = event.target.value }} />
+      <Search value={value} onChange={() => { }} />
     )
     expect(wrapper).toMatchSnapshot()
   })

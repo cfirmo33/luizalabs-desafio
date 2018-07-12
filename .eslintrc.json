@@ -1,7 +1,10 @@
 {
     "extends": ["pagarme-react"],
     "env": {
-        "browser": true
+        "browser": true,
+        "node": true,
+        "mocha": true,
+        "jest": true
     },
     "rules": {
         "jsx-a11y/anchor-is-valid": [ "error", {

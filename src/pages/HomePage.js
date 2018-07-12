@@ -99,6 +99,11 @@ class HomePage extends Component {
 HomePage.propTypes = {
   characters: PropTypes.arrayOf(Object).isRequired,
   requestList: PropTypes.func.isRequired,
+  match: PropTypes.objectOf(Object).isRequired,
+  sendNotification: PropTypes.func.isRequired,
+  result: PropTypes.objectOf(Object).isRequired,
+  notification: PropTypes.string.isRequired,
+
 }
 
 const mapStateToProps = ({ character, notification }) => ({

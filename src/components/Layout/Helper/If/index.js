@@ -10,6 +10,7 @@ const If = ({ test, children }) => {
 
 If.propTypes = {
   test: PropTypes.bool.isRequired,
+  /* eslint-disable react/forbid-prop-types */
   children: PropTypes.any.isRequired,
 }
 

@@ -19,6 +19,7 @@ const rootReducer = combineReducers({
 })
 const sagaMiddleware = createSagaMiddleware()
 
+/* eslint-disable no-underscore-dangle */
 const devTools = window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 const store = applyMiddleware(sagaMiddleware, multi)(createStore)(rootReducer, devTools)
 sagaMiddleware.run(rootSaga)

@@ -11,7 +11,6 @@ import { Link, withRouter } from 'react-router-dom'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import { listFavorites } from '../../../store/favorite/actions'
-import { requestList } from '../../../store/character/actions'
 import { sendNotification } from '../../../store/notification/actions'
 import NotificationTypes from '../../../store/notification/notificationTypes'
 
@@ -92,8 +91,10 @@ class Header extends Component {
 
 Header.propTypes = {
   listFavorites: PropTypes.func.isRequired,
-  requestList: PropTypes.func.isRequired,
   favorites: PropTypes.arrayOf(Object).isRequired,
+  match: PropTypes.objectOf(Object).isRequired,
+  sendNotification: PropTypes.func.isRequired,
+  history: PropTypes.func.isRequired,
 }
 
 const mapStateToProps = state => ({
@@ -102,7 +103,6 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => bindActionCreators({
   listFavorites,
-  requestList,
   sendNotification,
 }, dispatch)
 

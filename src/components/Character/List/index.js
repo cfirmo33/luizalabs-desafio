@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { image } from '../../../helpers/marvelApi'
+import { image } from '../../../services/Marvel/api'
 import CharacterItem from '../Item'
 
 const List = ({ characters }) => (
