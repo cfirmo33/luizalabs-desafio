@@ -21,16 +21,24 @@ Deseja ver a aplicação em funcionamento? [Clique aqui](https://fabriciojso.git
 
 ## Como executar
 ##### 1 - Clone do repostório:
-```git clone https://github.com/fabriciojso/luizalabs-desafio.git```
+```bash
+git clone https://github.com/fabriciojso/luizalabs-desafio.git
+```
 
 #### 2 - Acesse a pasta `./luizalabs-desafio` e instale as dependencias:
-```npm install```
+```bash
+npm install
+```
 
 #### 3 - Inicie o servidor local para acessar a aplicação:
-```npm start```
+```bash
+npm start
+```
 
 #### 4 - Para executar os testes execute o comando:
-```npm run test```
+```bash
+npm run test
+```
 
 ## Checklist
 - [ ] 100% de coverage nos testes;
