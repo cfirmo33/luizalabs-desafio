@@ -1,7 +1,7 @@
 >## Catálogo de super heróis da marvel
 > Uma aplicação web com a lista de diversos heróis da marvel, feito com React, Redux, Redux-Saga e Marvel API.
 
-![Marvel](https://i.imgur.com/KlQa0tO.gif | width=100)
+![Marvel](https://i.imgur.com/KlQa0tO.gif)
 
 [![Build Status](https://travis-ci.com/fabriciojso/luizalabs-desafio.svg?token=3dZSp4x5xxwAqpKZDQTe&branch=master)](https://travis-ci.com/fabriciojso/luizalabs-desafio)
 
