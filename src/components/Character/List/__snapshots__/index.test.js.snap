@@ -959,7 +959,7 @@ ShallowWrapper {
                               ],
                             }
           }
-          image="https://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784/landscape_incredible.jpg?ts=1&hash=60b2cd61fddda3308254369045af4b87&apikey=fba222cafbdc409f768cb548e344e409"
+          image="https://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784/standard_fantastic.jpg?ts=1&hash=60b2cd61fddda3308254369045af4b87&apikey=fba222cafbdc409f768cb548e344e409"
           name="3-D Man"
 />,
         <Item
@@ -1016,7 +1016,7 @@ ShallowWrapper {
                               ],
                             }
           }
-          image="https://i.annihil.us/u/prod/marvel/i/mg/3/20/5232158de5b16/landscape_incredible.jpg?ts=1&hash=60b2cd61fddda3308254369045af4b87&apikey=fba222cafbdc409f768cb548e344e409"
+          image="https://i.annihil.us/u/prod/marvel/i/mg/3/20/5232158de5b16/standard_fantastic.jpg?ts=1&hash=60b2cd61fddda3308254369045af4b87&apikey=fba222cafbdc409f768cb548e344e409"
           name="A-Bomb (HAS)"
 />,
         <Item
@@ -1334,7 +1334,7 @@ ShallowWrapper {
                               ],
                             }
           }
-          image="https://i.annihil.us/u/prod/marvel/i/mg/6/20/52602f21f29ec/landscape_incredible.jpg?ts=1&hash=60b2cd61fddda3308254369045af4b87&apikey=fba222cafbdc409f768cb548e344e409"
+          image="https://i.annihil.us/u/prod/marvel/i/mg/6/20/52602f21f29ec/standard_fantastic.jpg?ts=1&hash=60b2cd61fddda3308254369045af4b87&apikey=fba222cafbdc409f768cb548e344e409"
           name="A.I.M."
 />,
         <Item
@@ -1476,7 +1476,7 @@ ShallowWrapper {
                               ],
                             }
           }
-          image="https://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available/landscape_incredible.jpg?ts=1&hash=60b2cd61fddda3308254369045af4b87&apikey=fba222cafbdc409f768cb548e344e409"
+          image="https://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available/standard_fantastic.jpg?ts=1&hash=60b2cd61fddda3308254369045af4b87&apikey=fba222cafbdc409f768cb548e344e409"
           name="Aaron Stack"
 />,
       ],
@@ -1706,7 +1706,7 @@ ShallowWrapper {
               },
             ],
           },
-          "image": "https://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784/landscape_incredible.jpg?ts=1&hash=60b2cd61fddda3308254369045af4b87&apikey=fba222cafbdc409f768cb548e344e409",
+          "image": "https://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784/standard_fantastic.jpg?ts=1&hash=60b2cd61fddda3308254369045af4b87&apikey=fba222cafbdc409f768cb548e344e409",
           "name": "3-D Man",
         },
         "ref": null,
@@ -1769,7 +1769,7 @@ ShallowWrapper {
               },
             ],
           },
-          "image": "https://i.annihil.us/u/prod/marvel/i/mg/3/20/5232158de5b16/landscape_incredible.jpg?ts=1&hash=60b2cd61fddda3308254369045af4b87&apikey=fba222cafbdc409f768cb548e344e409",
+          "image": "https://i.annihil.us/u/prod/marvel/i/mg/3/20/5232158de5b16/standard_fantastic.jpg?ts=1&hash=60b2cd61fddda3308254369045af4b87&apikey=fba222cafbdc409f768cb548e344e409",
           "name": "A-Bomb (HAS)",
         },
         "ref": null,
@@ -2093,7 +2093,7 @@ ShallowWrapper {
               },
             ],
           },
-          "image": "https://i.annihil.us/u/prod/marvel/i/mg/6/20/52602f21f29ec/landscape_incredible.jpg?ts=1&hash=60b2cd61fddda3308254369045af4b87&apikey=fba222cafbdc409f768cb548e344e409",
+          "image": "https://i.annihil.us/u/prod/marvel/i/mg/6/20/52602f21f29ec/standard_fantastic.jpg?ts=1&hash=60b2cd61fddda3308254369045af4b87&apikey=fba222cafbdc409f768cb548e344e409",
           "name": "A.I.M.",
         },
         "ref": null,
@@ -2241,7 +2241,7 @@ ShallowWrapper {
               },
             ],
           },
-          "image": "https://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available/landscape_incredible.jpg?ts=1&hash=60b2cd61fddda3308254369045af4b87&apikey=fba222cafbdc409f768cb548e344e409",
+          "image": "https://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available/standard_fantastic.jpg?ts=1&hash=60b2cd61fddda3308254369045af4b87&apikey=fba222cafbdc409f768cb548e344e409",
           "name": "Aaron Stack",
         },
         "ref": null,
@@ -2478,7 +2478,7 @@ ShallowWrapper {
                                     ],
                                   }
             }
-            image="https://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784/landscape_incredible.jpg?ts=1&hash=60b2cd61fddda3308254369045af4b87&apikey=fba222cafbdc409f768cb548e344e409"
+            image="https://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784/standard_fantastic.jpg?ts=1&hash=60b2cd61fddda3308254369045af4b87&apikey=fba222cafbdc409f768cb548e344e409"
             name="3-D Man"
 />,
           <Item
@@ -2535,7 +2535,7 @@ ShallowWrapper {
                                     ],
                                   }
             }
-            image="https://i.annihil.us/u/prod/marvel/i/mg/3/20/5232158de5b16/landscape_incredible.jpg?ts=1&hash=60b2cd61fddda3308254369045af4b87&apikey=fba222cafbdc409f768cb548e344e409"
+            image="https://i.annihil.us/u/prod/marvel/i/mg/3/20/5232158de5b16/standard_fantastic.jpg?ts=1&hash=60b2cd61fddda3308254369045af4b87&apikey=fba222cafbdc409f768cb548e344e409"
             name="A-Bomb (HAS)"
 />,
           <Item
@@ -2853,7 +2853,7 @@ ShallowWrapper {
                                     ],
                                   }
             }
-            image="https://i.annihil.us/u/prod/marvel/i/mg/6/20/52602f21f29ec/landscape_incredible.jpg?ts=1&hash=60b2cd61fddda3308254369045af4b87&apikey=fba222cafbdc409f768cb548e344e409"
+            image="https://i.annihil.us/u/prod/marvel/i/mg/6/20/52602f21f29ec/standard_fantastic.jpg?ts=1&hash=60b2cd61fddda3308254369045af4b87&apikey=fba222cafbdc409f768cb548e344e409"
             name="A.I.M."
 />,
           <Item
@@ -2995,7 +2995,7 @@ ShallowWrapper {
                                     ],
                                   }
             }
-            image="https://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available/landscape_incredible.jpg?ts=1&hash=60b2cd61fddda3308254369045af4b87&apikey=fba222cafbdc409f768cb548e344e409"
+            image="https://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available/standard_fantastic.jpg?ts=1&hash=60b2cd61fddda3308254369045af4b87&apikey=fba222cafbdc409f768cb548e344e409"
             name="Aaron Stack"
 />,
         ],
@@ -3225,7 +3225,7 @@ ShallowWrapper {
                 },
               ],
             },
-            "image": "https://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784/landscape_incredible.jpg?ts=1&hash=60b2cd61fddda3308254369045af4b87&apikey=fba222cafbdc409f768cb548e344e409",
+            "image": "https://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784/standard_fantastic.jpg?ts=1&hash=60b2cd61fddda3308254369045af4b87&apikey=fba222cafbdc409f768cb548e344e409",
             "name": "3-D Man",
           },
           "ref": null,
@@ -3288,7 +3288,7 @@ ShallowWrapper {
                 },
               ],
             },
-            "image": "https://i.annihil.us/u/prod/marvel/i/mg/3/20/5232158de5b16/landscape_incredible.jpg?ts=1&hash=60b2cd61fddda3308254369045af4b87&apikey=fba222cafbdc409f768cb548e344e409",
+            "image": "https://i.annihil.us/u/prod/marvel/i/mg/3/20/5232158de5b16/standard_fantastic.jpg?ts=1&hash=60b2cd61fddda3308254369045af4b87&apikey=fba222cafbdc409f768cb548e344e409",
             "name": "A-Bomb (HAS)",
           },
           "ref": null,
@@ -3612,7 +3612,7 @@ ShallowWrapper {
                 },
               ],
             },
-            "image": "https://i.annihil.us/u/prod/marvel/i/mg/6/20/52602f21f29ec/landscape_incredible.jpg?ts=1&hash=60b2cd61fddda3308254369045af4b87&apikey=fba222cafbdc409f768cb548e344e409",
+            "image": "https://i.annihil.us/u/prod/marvel/i/mg/6/20/52602f21f29ec/standard_fantastic.jpg?ts=1&hash=60b2cd61fddda3308254369045af4b87&apikey=fba222cafbdc409f768cb548e344e409",
             "name": "A.I.M.",
           },
           "ref": null,
@@ -3760,7 +3760,7 @@ ShallowWrapper {
                 },
               ],
             },
-            "image": "https://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available/landscape_incredible.jpg?ts=1&hash=60b2cd61fddda3308254369045af4b87&apikey=fba222cafbdc409f768cb548e344e409",
+            "image": "https://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available/standard_fantastic.jpg?ts=1&hash=60b2cd61fddda3308254369045af4b87&apikey=fba222cafbdc409f768cb548e344e409",
             "name": "Aaron Stack",
           },
           "ref": null,

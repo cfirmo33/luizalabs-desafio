@@ -98,7 +98,6 @@ Header.propTypes = {
 
 const mapStateToProps = state => ({
   favorites: state.favorite.list,
-  notification: state.notification.message,
 })
 
 const mapDispatchToProps = dispatch => bindActionCreators({
