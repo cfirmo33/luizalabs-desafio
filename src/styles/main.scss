@@ -334,9 +334,11 @@ main {
     border-bottom: 1px solid #32323a;
     margin-bottom: 20px;
     @media #{$mobile} {
-      font-size: 50px;
-      margin-bottom: -5px;
-      display: none;
+      font-size: 40px;
+      letter-spacing: -3px;
+      small{
+        font-size: 35px;
+      }
     }
   }
 }
@@ -581,11 +583,5 @@ button.more {
         }
       }
     }
-  }
-}
-
-.redux-toastr {
-  @media #{$mobile} {
-    display: none;
   }
 }

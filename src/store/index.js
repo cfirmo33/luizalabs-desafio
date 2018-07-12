@@ -5,16 +5,12 @@ import multi from 'redux-multi'
 import characterReducer from './character/reducer'
 import favoriteReducer from './favorite/reducer'
 import notificationReducer from './notification/reducer'
-
-import { reducer as toastReducer } from 'react-redux-toastr'
-
 import rootSaga from './character/sagas'
 
 
 const rootReducer = combineReducers({
   character: characterReducer,
   favorite: favoriteReducer,
-  toastr: toastReducer,
   notification: notificationReducer,
 })
 const sagaMiddleware = createSagaMiddleware()

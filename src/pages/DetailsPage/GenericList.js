@@ -90,7 +90,7 @@ GenericList.propTypes = {
   result: PropTypes.objectOf(Object).isRequired,
   list: PropTypes.arrayOf(Object).isRequired,
   title: PropTypes.string.isRequired,
-  notification: PropTypes.objectOf(Object),
+  notification: PropTypes.string,
 }
 
 GenericList.defaultProps = {

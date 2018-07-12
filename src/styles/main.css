@@ -318,9 +318,10 @@ main {
   margin-bottom: 20px; }
   @media (max-width: 767px) {
     .box-title .title-box {
-      font-size: 50px;
-      margin-bottom: -5px;
-      display: none; } }
+      font-size: 40px;
+      letter-spacing: -3px; }
+      .box-title .title-box small {
+        font-size: 35px; } }
 
 button.more {
   display: table;
@@ -518,7 +519,3 @@ button.more {
       .details figure .shadow {
         opacity: 1;
         background-color: transparent; } }
-
-@media (max-width: 767px) {
-  .redux-toastr {
-    display: none; } }

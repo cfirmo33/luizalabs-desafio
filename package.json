@@ -1,5 +1,10 @@
 {
-  "name": "csh-web",
+  "name": "luizalabs-desafio",
+  "author": {
+    "name": "Fabricio Oliveira",
+    "email": "fabricio.jhonata@gmail.com",
+    "url": "https://www.linkedin.com/in/fabriciojso/"
+  },
   "version": "0.1.0",
   "private": true,
   "homepage": "https://fabriciojso.github.io/luizalabs-desafio",
@@ -14,7 +19,6 @@
     "react-dom": "^16.4.1",
     "react-infinite-scroller": "^1.2.0",
     "react-redux": "^5.0.7",
-    "react-redux-toastr": "^7.3.0",
     "react-router-dom": "^4.3.1",
     "react-scripts": "1.1.4",
     "redux": "^4.0.0",
@@ -47,7 +51,6 @@
     "eslint-plugin-import": "^2.13.0",
     "eslint-plugin-jsx-a11y": "^6.1.0",
     "eslint-plugin-react": "^7.10.0",
-    "faker": "^4.1.0",
     "gh-pages": "^1.2.0",
     "node-sass-chokidar": "^1.3.0",
     "puppeteer": "^1.5.0",

@@ -25,10 +25,11 @@ class DetailsPage extends Component {
   }
   render () {
     const { match: { params: { id, page } }, character } = this.props
-
     if (this.props.fetching || character.name === undefined) {
       return (
-        <Loading />
+        <PageTemplate>
+          <Loading />
+        </PageTemplate>
       )
     }
 
@@ -80,6 +81,7 @@ class DetailsPage extends Component {
             <div className="shadow" />
           </figure>
         </div>
+
       </PageTemplate>
     )
   }

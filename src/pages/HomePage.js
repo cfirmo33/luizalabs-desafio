@@ -59,7 +59,7 @@ class HomePage extends Component {
       <PageTemplate>
         <div className="box-title">
           <h4 className="title-box">
-            <If test={this.search === undefined}>Todos</If>
+            <If test={this.search === undefined}>Heróis</If>
             <If test={this.search !== undefined}> <small>Busca: {this.search}</small></If>
           </h4>
           <If test={this.props.notification === NotificationTypes.LOADING_HOME_NOTIFICATION}>

@@ -2,7 +2,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import './styles/main.css'
-import 'react-redux-toastr/lib/css/react-redux-toastr.min.css'
 import HomePage from './pages/HomePage'
 import FavoritesPage from './pages/FavoritesPage'
 import DetailsPage from './pages/DetailsPage'

@@ -6,12 +6,13 @@ import CharacterItem from '../Item'
 const List = ({ characters }) => (
   <div className="lista-de-personagens">
     {
-     characters.map(character => (
+     characters.map((character, index) => (
        <CharacterItem
          character={character}
          name={character.name}
          image={image(`${character.thumbnail.path}/standard_fantastic.${character.thumbnail.extension}`)}
-         key={character.id}
+         /* eslint-disable react/no-array-index-key */
+         key={index}
        />
       ))
     }

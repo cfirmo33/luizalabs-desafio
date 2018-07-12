@@ -22,7 +22,7 @@ Deseja ver a aplicação em funcionamento? [Clique aqui](https://fabriciojso.git
 - [Travis CI](https://travis-ci.com/fabriciojso/luizalabs-desafio) ferramenta de integração continua.
 
 ## Como executar
-##### 1 - Clone do repostório:
+##### 1 - Clone do repositório:
 ```bash
 git clone https://github.com/fabriciojso/luizalabs-desafio.git
 ```

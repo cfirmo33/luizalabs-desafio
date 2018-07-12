@@ -73,7 +73,7 @@ class Header extends Component {
           </h1>
 
           <Menu>
-            <MenuItem to="/" title="Todos" icon="fas fa-th" />
+            <MenuItem to="/" title="Heróis" icon="fas fa-th" />
             <If test={favorites.length > 0}>
               <MenuItem to="/favorites" title="Favoritos" icon="far fa-heart" number={favorites.length} />
             </If>
