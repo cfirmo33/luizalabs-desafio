@@ -102,8 +102,11 @@ HomePage.propTypes = {
   match: PropTypes.objectOf(Object).isRequired,
   sendNotification: PropTypes.func.isRequired,
   result: PropTypes.objectOf(Object).isRequired,
-  notification: PropTypes.string.isRequired,
+  notification: PropTypes.string,
+}
 
+HomePage.defaultProps = {
+  notification: null,
 }
 
 const mapStateToProps = ({ character, notification }) => ({

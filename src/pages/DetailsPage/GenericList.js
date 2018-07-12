@@ -6,7 +6,7 @@ import { connect } from 'react-redux'
 import { sendNotification } from '../../store/notification/actions'
 import NotificationTypes from '../../store/notification/notificationTypes'
 
-import { image } from '../../helpers/marvelApi'
+import { image } from '../../services/Marvel/api'
 import InfiniteScroll from 'react-infinite-scroller'
 import Loading from '../../components/Layout/Loading'
 import If from '../../components/Layout/Helper/If'
@@ -49,23 +49,21 @@ class GenericList extends Component {
       <div>
         <If test={this.getItems().length > 0}>
           <h3>{title}</h3>
-        </If>
-        <If test={this.getItems().length === 0}>
-          <h4 className="none-items">Nenhum item encontrado para este personagem.</h4>
-        </If>
-        <InfiniteScroll
-          pageStart={0}
-          element="div"
-          loadMore={(page) => {
+
+
+          <InfiniteScroll
+            pageStart={0}
+            element="div"
+            loadMore={(page) => {
               this.props.fetchList(character.id, page)
           }}
-          hasMore={this.hasMore()}
-          threshold={400}
-          useWindow
-          loader={<Loading key={0} />}
-        >
-          <div className="grid-items">
-            {
+            hasMore={this.hasMore()}
+            threshold={400}
+            useWindow
+            loader={<Loading key={0} />}
+          >
+            <div className="grid-items">
+              {
             this.getItems().map(item => (
               <div className="item" key={item.id}>
                 <img src={image(`${item.thumbnail.path}.${item.thumbnail.extension}`)} alt={item.title} />
@@ -73,8 +71,13 @@ class GenericList extends Component {
               </div>
             ))
           }
-          </div>
-        </InfiniteScroll>
+            </div>
+          </InfiniteScroll>
+        </If>
+
+        <If test={this.getItems().length === 0}>
+          <h4 className="none-items">Nenhum item encontrado para este personagem.</h4>
+        </If>
       </div>
     )
   }
@@ -87,7 +90,11 @@ GenericList.propTypes = {
   result: PropTypes.objectOf(Object).isRequired,
   list: PropTypes.arrayOf(Object).isRequired,
   title: PropTypes.string.isRequired,
-  notification: PropTypes.objectOf(Object).isRequired,
+  notification: PropTypes.objectOf(Object),
+}
+
+GenericList.defaultProps = {
+  notification: null,
 }
 
 const mapStateToProps = state => ({

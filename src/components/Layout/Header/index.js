@@ -94,7 +94,7 @@ Header.propTypes = {
   favorites: PropTypes.arrayOf(Object).isRequired,
   match: PropTypes.objectOf(Object).isRequired,
   sendNotification: PropTypes.func.isRequired,
-  history: PropTypes.func.isRequired,
+  history: PropTypes.objectOf(Object).isRequired,
 }
 
 const mapStateToProps = state => ({
