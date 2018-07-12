@@ -726,7 +726,6 @@ ShallowWrapper {
           ]
     }
     listFavorites={[Function]}
-    requestList={[Function]}
     sendNotification={[Function]}
     store={
         Object {
